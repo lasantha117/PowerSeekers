@@ -8,22 +8,21 @@ public class question {
     @Id
     @Column(name = "q_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String q_id;
 
-    @Column(name ="q_type", columnDefinition = "character varying(15) not null")
+    @Column(name = "q_type", columnDefinition = "character varying(15) not null")
     private String q_type;
 
-    @Column(name="uni_ID",columnDefinition = "character varying(15) not null" )
+    @Column(name = "uni_ID", columnDefinition = "character varying(15) not null")
     private String uni_ID;
 
 
-
-    public Long getId() {
-        return id;
+    public String getQ_id() {
+        return q_id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setQ_id(String q_id) {
+        this.q_id = q_id;
     }
 
     public String getQ_type() {
