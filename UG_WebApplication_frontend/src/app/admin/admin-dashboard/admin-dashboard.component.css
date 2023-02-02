@@ -1,0 +1,167 @@
+*{
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+body{
+background: url('/assets/img/adminMain.jpg') no-repeat center center fixed;
+justify-content: center;
+
+display: flex;
+
+height: 100vh;
+margin: -20px 0 50px;
+font-family: 'Montserrat', sans-serif;
+background-size: cover;
+flex-direction: column;
+align-items: center;
+
+
+}
+
+.middle{
+
+  background: black;
+  position: fixed;
+  top: 5;
+  left: 7;
+  width: 500px;
+  height: 10%;
+  padding: 70px;
+
+}
+
+.wrapper .sidebar{
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 225px;
+  height: 100%;
+  padding: 20px 0;
+  transition: all 0.5s ease;
+}
+
+.wrapper .sidebar .profile{
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.wrapper .sidebar .profile img{
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.wrapper .sidebar .profile h3{
+  color: #ffffff;
+  margin: 10px 0 5px;
+}
+
+.wrapper .sidebar .profile p{
+  color: rgb(206, 240, 253);
+  font-size: 14px;
+}
+
+.wrapper .sidebar ul li a{
+  display: block;
+  padding: 13px 30px;
+  border-bottom: 1px solid white;
+  color: rgb(241, 237, 237);
+  font-size: 16px;
+  position: relative;
+}
+
+.wrapper .sidebar ul li a .icon{
+  color: #dee4ec;
+  width: 30px;
+  display: inline-block;
+}
+wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+  color: black;
+
+  background:white;
+  border-right: 2px solid #ffcbd1;
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+  color: #ee6b6e;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+  display: block;
+}
+
+
+
+.wrapper .section{
+  width: calc(100% - 225px);
+  margin-left: 225px;
+  transition: all 0.5s ease;
+}
+
+.wrapper .section .top_navbar{
+  background: #ee6b6e;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+
+}
+
+.wrapper .section .top_navbar .hamburger a{
+  font-size: 28px;
+  color: #f4fbff;
+}
+
+.wrapper .section .top_navbar .hamburger a:hover{
+  color: #a2ecff;
+}
+
+
+body.active .wrapper .sidebar{
+  left: -225px;
+}
+
+body.active .wrapper .section{
+  margin-left: 0;
+  width: 100%;
+}
+
+.centerImg{
+  text-align:center;
+}
+.bottomleft {
+  position: absolute;
+  bottom: 30px;
+  left: 300px;
+  font-size: 18px;
+}
+.bottomright {
+  position: absolute;
+  bottom: 30px;
+  right: 300px;
+  font-size: 18px;
+}
+
+
+.topleft {
+  position: absolute;
+  top: 30px;
+  left: 300px;
+  font-size: 18px;
+}
+.topright {
+  position: absolute;
+  top: 30px;
+  right: 300px;
+  font-size: 18px;
+}
