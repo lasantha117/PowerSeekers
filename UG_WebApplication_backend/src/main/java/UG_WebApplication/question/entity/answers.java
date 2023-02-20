@@ -17,6 +17,9 @@ public class answers {
     @Column(name = "q_id",insertable=false, updatable=false)
     private String q_id;
 
+    @Column(name ="marks")
+    private String marks;
+
 
     @ManyToOne
     @JoinColumn(name="q_id")

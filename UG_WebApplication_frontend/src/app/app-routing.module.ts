@@ -31,7 +31,7 @@ const routes: Routes = [
   },
 
   {
-    path:'psychometric test',
+    path:'psychometric-test',
     component:PsychometricTestComponent
   },
   {

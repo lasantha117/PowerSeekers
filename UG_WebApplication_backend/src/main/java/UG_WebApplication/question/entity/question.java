@@ -1,4 +1,5 @@
 package UG_WebApplication.question.entity;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.Set;
@@ -7,6 +8,7 @@ import java.util.Set;
 @Table(name = "questions")
 public class question {
 
+    @JsonIgnore
     @OneToMany
     @JoinColumn(name = "q_id")
     private Set<answers> answers;
@@ -45,6 +47,7 @@ public class question {
     public String getQ_type() {
         return q_type;
     }
+
 
     public void setQ_type(String q_type) {
         this.q_type = q_type;
