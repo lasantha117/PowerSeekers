@@ -24,7 +24,7 @@
 
     <ul>
       <li>
-        <a href="#">
+        <a routerLink="/admin-dashboard">
           <span class="item">Main Dashboard</span>
         </a>
       </li>
@@ -90,8 +90,20 @@
 
 <div class="image-upload">
   <input type="file" (change)="onFileSelected($event, 1)">
+  <button type="submit">Submit</button>
+  <br>  <br>
+
   <input type="file" (change)="onFileSelected($event, 2)">
+  <button type="submit">Submit</button>
+  <br>  <br>
+
   <input type="file" (change)="onFileSelected($event, 3)">
+  <button type="submit">Submit</button>
+  <br>  <br>
+
+
   <input type="file" (change)="onFileSelected($event, 4)">
+  <button type="submit">Submit</button>
+  <br>  <br>
 </div>
 

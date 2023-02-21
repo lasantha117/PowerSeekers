@@ -22,6 +22,8 @@ export class AdminTestControlComponent {
   }
 
 
+
+
   imageUrl1: any;
   imageUrl2: any;
   imageUrl3: any;
@@ -62,6 +64,10 @@ export class AdminTestControlComponent {
       reader.readAsDataURL(file);
     }
   }
+
+
+
+
 
 
 

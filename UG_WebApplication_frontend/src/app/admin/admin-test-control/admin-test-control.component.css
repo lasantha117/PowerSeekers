@@ -84,3 +84,23 @@ body{
 .wrapper .sidebar ul li a.active .icon{
   color: #ee6b6e;
 }
+
+
+/*-----------------------------------*/
+      /*the button */
+    .button {
+      background-color: red;
+      border: 2px solid red;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+
+    /*------ Text area CSS---------------------------- */
+
+
+
+
+
+
