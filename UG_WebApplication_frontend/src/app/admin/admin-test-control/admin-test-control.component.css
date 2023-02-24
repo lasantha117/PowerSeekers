@@ -89,18 +89,32 @@ body{
 /*-----------------------------------*/
       /*the button */
     .button {
-      background-color: red;
-      border: 2px solid red;
+      background-color: deepskyblue;
+      border: 2px black;
       color: white;
       padding: 10px 20px;
       font-size: 16px;
       border-radius: 5px;
     }
 
-    /*------ Text area CSS---------------------------- */
 
+    /*------ error msg---------------------------- */
 
+.error-message {
+  color: red;
+  font-size: 0.8em;
+  margin-top: 0.5em;
+}
 
+/*------ form---------------------------- */
 
+h1{
+  color: white;
+}
+
+.formFont
+{
+  color: #FFFFFF;
+}
 
 

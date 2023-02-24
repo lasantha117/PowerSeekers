@@ -80,30 +80,86 @@
   </div>
 
 </div>
-<!------------------------------------------------------------->
-<div class="image-preview">
-  <img *ngIf="imageUrl1" [src]="imageUrl1" class="preview-image top-left">
-  <img *ngIf="imageUrl2" [src]="imageUrl2" class="preview-image top-right">
-  <img *ngIf="imageUrl3" [src]="imageUrl3" class="preview-image bottom-left">
-  <img *ngIf="imageUrl4" [src]="imageUrl4" class="preview-image bottom-right">
+
+
+
+
+
+
+
+<h1>Questions Data</h1>
+
+<div class="formFont">
+  <br><br><br>
+
+
+  <!--------------------select degree----------------------------------------->
+  <form  #form="ngForm" (ngSubmit)="onSubmit()">
+
+
+  <label>Select the University:</label>
+  <select id="university" name="university" [(ngModel)]="selectedUniversity" required>
+    <option value="moratuwa">University of Moratuwa</option>
+    <option value="colombo">University of Colombo</option>
+  </select>
+  <div *ngIf="form.submitted && form.controls['university'].invalid" class="error-message">
+    University is required
+  </div>
+
+
+  <label>Select the Degree:</label>
+  <select id="degree" name="degree" [(ngModel)]="selectedDegree" required>
+    <option *ngIf="selectedUniversity === 'moratuwa'" value="IT">IT</option>
+    <option *ngIf="selectedUniversity === 'moratuwa'" value="ITM">ITM</option>
+    <option *ngIf="selectedUniversity === 'colombo'" value="CS">CS</option>
+  </select>
+  <div *ngIf="form.submitted && form.controls['degree'].invalid" class="error-message">
+    Degree is required
+  </div>
+
+
+
+  <!--------------------get quesgtion----------------------------------------->
+<br><br><br>
+
+  <label>Question ID:</label>
+  <input type="text" [(ngModel)]="q_id" name="q_id" required><br>
+
+  <div *ngIf="form.submitted && form.controls['q_id'].invalid" class="error-message">
+    Question ID is required
+  </div>
+  <br><br><br>
+
+
+  <label>Question Type:</label>
+  <input type="text" [(ngModel)]="q_type" name="q_type" required><br>
+  <div *ngIf="form.submitted && form.controls['q_type'].invalid" class="error-message">
+    Question Type is required
+  </div>
+  <br><br><br>
+
+  <label>The Question:</label>
+  <input type="text" [(ngModel)]="thequestion" name="thequestion" required><br>
+  <div *ngIf="form.submitted && form.controls['thequestion'].invalid" class="error-message">
+    The Question  is required
+  </div>
+
+  <br><br><br>
+
+
+
+  <br>
+  <button type="submit">Submit</button>
+  <button type="reset">Clear</button>
+    <br>  <br>   <br>
+
+    <button (click)="GoAddAnswers()" class="button" >Add anwers </button>
+
+</form>
+
 </div>
 
-<div class="image-upload">
-  <input type="file" (change)="onFileSelected($event, 1)">
-  <button type="submit">Submit</button>
-  <br>  <br>
-
-  <input type="file" (change)="onFileSelected($event, 2)">
-  <button type="submit">Submit</button>
-  <br>  <br>
-
-  <input type="file" (change)="onFileSelected($event, 3)">
-  <button type="submit">Submit</button>
-  <br>  <br>
 
 
-  <input type="file" (change)="onFileSelected($event, 4)">
-  <button type="submit">Submit</button>
-  <br>  <br>
-</div>
 
+</body>

@@ -7,6 +7,7 @@ import {IndexComponent} from "./index/index.component";
 import {PsychometricTestComponent} from "./graduate-and-undergraduate/psychometric-test/psychometric-test.component";
 import {AdminDashboardComponent} from "./admin/admin-dashboard/admin-dashboard.component";
 import {AdminTestControlComponent} from "./admin/admin-test-control/admin-test-control.component";
+import {AddAnswersComponent} from "./admin/admin-test-control/add-answers/add-answers.component";
 
 
 const routes: Routes = [
@@ -42,6 +43,10 @@ const routes: Routes = [
   {
     path:'admin-test-control',
     component:AdminTestControlComponent
+  },
+  {
+    path:'add-answers',
+    component:AddAnswersComponent
   },
 
 
