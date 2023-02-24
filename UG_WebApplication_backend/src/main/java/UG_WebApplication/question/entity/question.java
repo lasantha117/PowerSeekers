@@ -10,22 +10,25 @@ public class question {
 
     @JsonIgnore
     @OneToMany
-    @JoinColumn(name = "q_id")
+    @JoinColumn(name="q_id")
     private Set<answers> answers;
 
 
     @Id
     @Column(name = "q_id" ,insertable=false, updatable=false)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String q_id;
 
     @Column(name = "q_type", columnDefinition = "character varying(15) not null")
     private String q_type;
 
+    @Column(name = "thequestion", columnDefinition = "character varying(15) not null")
+    private String thequestion;
 
+    @Column(name = "university", columnDefinition = "character varying(15) not null")
+    private String university;
 
-    @Column(name = "uni_ID", columnDefinition = "character varying(15) not null")
-    private String uni_ID;
+    @Column(name = "degree", columnDefinition = "character varying(15) not null")
+    private String degree;
 
 
     public Set<UG_WebApplication.question.entity.answers> getAnswers() {
@@ -53,11 +56,31 @@ public class question {
         this.q_type = q_type;
     }
 
-    public String getUni_ID() {
-        return uni_ID;
+
+    public String getUniversity() {
+        return university;
     }
 
-    public void setUni_ID(String uni_ID) {
-        this.uni_ID = uni_ID;
+    public void setUniversity(String university) {
+        this.university = university;
     }
+
+    public String getThequestion() {
+        return thequestion;
+    }
+
+    public void setThequestion(String thequestion) {
+        this.thequestion = thequestion;
+    }
+
+    public String getDegree() {
+        return degree;
+    }
+
+    public void setDegree(String degree) {
+        this.degree = degree;
+    }
+
+
+
 }

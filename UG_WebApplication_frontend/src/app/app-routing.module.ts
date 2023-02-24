@@ -7,9 +7,8 @@ import {IndexComponent} from "./index/index.component";
 import {PsychometricTestComponent} from "./graduate-and-undergraduate/psychometric-test/psychometric-test.component";
 import {AdminDashboardComponent} from "./admin/admin-dashboard/admin-dashboard.component";
 import {AdminTestControlComponent} from "./admin/admin-test-control/admin-test-control.component";
-import {VacancyDisplayComponent} from "./vacancy-display/vacancy-display.component";
-import {VacancyAddComponent} from "./vacancy-add/vacancy-add.component";
-import {VacancyApplyFormComponent} from "./vacancy-apply-form/vacancy-apply-form.component";
+import {AddAnswersComponent} from "./admin/admin-test-control/add-answers/add-answers.component";
+
 
 const routes: Routes = [
   {
@@ -45,16 +44,11 @@ const routes: Routes = [
     path:'admin-test-control',
     component:AdminTestControlComponent
   },
+  {
+    path:'add-answers',
+    component:AddAnswersComponent
+  },
 
-  {
-    path: 'vacancy-display', component: VacancyDisplayComponent
-  },
-  {
-    path: 'vacancy-add', component: VacancyAddComponent
-  },
-  {
-    path: 'vacancy-apply-form', component: VacancyApplyFormComponent
-  }
 
 
 ];
