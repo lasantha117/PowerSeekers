@@ -53,9 +53,7 @@ export class AdminTestControlComponent {
 
   }
 
-  GoAddAnswers(){
-    this.router.navigate(['/add-answers']);
-  }
+
 
 
 

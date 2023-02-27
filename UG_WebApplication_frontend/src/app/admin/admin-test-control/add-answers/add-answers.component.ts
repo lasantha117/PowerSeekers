@@ -2,40 +2,44 @@ import { Component } from '@angular/core';
 import {Router} from "@angular/router";
 import {HttpClient} from "@angular/common/http";
 
+
+
+
+function upload(params: { ContentType: any; Bucket: string; ACL: string; Body: any; Key: string }, param2: (err: any, data: any) => void) {
+
+}
 @Component({
   selector: 'app-add-answers',
   templateUrl: './add-answers.component.html',
   styleUrls: ['./add-answers.component.css']
 })
 export class AddAnswersComponent {
-  answerId: any;
-  q_id : any;
+
+  a_id: any;
+  question_id: any;
   answer : any;
   jobPosition: any;
-  score: any;
+  marks: any;
   showScore = false;
 
 
-  constructor(private router: Router,private http: HttpClient) {
-  }
 
   AnswerSubmit() {
     const url = 'http://localhost:8080/addAnswers';
     const data = {
-      a_id: this.answerId,
-      q_id: this.q_id,
+      a_id: this.a_id,
+      question_id: this.question_id,
       answer:this.answer,
       job_designation: this.jobPosition,
-      marks:this.score
+      marks:this.marks
 
     };
-
 
 
     this.http.post(url, data).subscribe(
       res => {
         console.log(res);
-        alert('Question saved successfully!');
+        alert('Answer saved successfully!');
       },
       err => {
         console.log(err);
@@ -44,19 +48,12 @@ export class AddAnswersComponent {
 
 
 
-
-    this.http.post('http://localhost:8080/addAnswers', data).subscribe(
-      response => console.log(response),
-      error => console.log(error)
-    );
   }
   onJobPositionChange() {
-    if (this.jobPosition) {
-      this.showScore = true;
-    } else {
-      this.showScore = false;
-    }
+    this.showScore = !!this.jobPosition;
   }
 
 
+  constructor(private router: Router,private http: HttpClient) {
+  }
 }

@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import java.util.List;
 import java.util.Set;
 
+
 @Entity
 @Table(name = "questions")
 public class question {
@@ -19,18 +20,17 @@ public class question {
     @Column(name = "q_id" ,insertable=false, updatable=false)
     private String q_id;
 
-    @Column(name = "q_type", columnDefinition = "character varying(15) not null")
+    @Column(name = "q_type")
     private String q_type;
 
-    @Column(name = "thequestion", columnDefinition = "character varying(15) not null")
+    @Column(name = "thequestion")
     private String thequestion;
 
-    @Column(name = "university", columnDefinition = "character varying(15) not null")
+    @Column(name = "university")
     private String university;
 
-    @Column(name = "degree", columnDefinition = "character varying(15) not null")
+    @Column(name = "degree")
     private String degree;
-
 
     public Set<UG_WebApplication.question.entity.answers> getAnswers() {
         return answers;

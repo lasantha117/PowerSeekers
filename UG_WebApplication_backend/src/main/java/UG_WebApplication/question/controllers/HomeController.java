@@ -42,6 +42,7 @@ public class HomeController {
 
 }
 
+@CrossOrigin("http://localhost:4200/")
 @RestController
 class answerController {
 
