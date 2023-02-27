@@ -10,6 +10,7 @@ public class answersService {
     @Autowired
          answersRepository answersRepository;
 
+
     public answersService()
     {
 
@@ -18,11 +19,13 @@ public class answersService {
     {
         return answersRepository.findAll();
     }
-    public answers SaveAnswers(answers answers){
+    public answers SaveAnswers( answers answers){
 
         return answersRepository.save(answers);
     }
 
 
 }
+
+
 
