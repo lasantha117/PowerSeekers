@@ -1,28 +1,21 @@
 <div class="formFont">
 
 
-    <form  #form="ngForm" (ngSubmit)="AnswerSubmit()">
+  <form  #form="ngForm" (ngSubmit)=" AnswerSubmit()">
 
 
     <label>Answer ID:</label>
-    <input type="text" [(ngModel)]="answerId" name="answerId" required>
-      <div *ngIf="form.submitted && form.controls['thequestion'].invalid" class="error-message">
-        The Question  is required
-      </div>
-    <br><br>
+    <input type="text" [(ngModel)]="a_id" name="answerId" required>
+
 
     <label>Question ID:</label>
-    <input type="text" [(ngModel)]="q_id" name="q_id" required>
+    <input type="text" [(ngModel)]="question_id" name="question_id" required>
     <br><br>
-      <div *ngIf="form.submitted && form.controls['thequestion'].invalid" class="error-message">
-        The Question  is required
-      </div>
+
 
     <label>Answer:</label>
     <input type="text" [(ngModel)]="answer" name="answer" required>
-      <div *ngIf="form.submitted && form.controls['thequestion'].invalid" class="error-message">
-        The Question  is required
-      </div>
+
     <br><br>
 
     <label>Job Position:</label>
@@ -43,13 +36,11 @@
     <br><br>
     <div *ngIf="showScore">
       <label>Score:</label>
-      <select [(ngModel)]="score" name="score" required>
+      <select [(ngModel)]="marks" name="marks" required>
         <option value="">Select a score</option>
         <option *ngFor="let i of [0,1,2,3,4,5]" [value]="i">{{i}}</option>
       </select>
-      <div *ngIf="form.submitted && form.controls['thequestion'].invalid" class="error-message">
-        The Question  is required
-      </div>
+
       <br><br>
     </div>
 

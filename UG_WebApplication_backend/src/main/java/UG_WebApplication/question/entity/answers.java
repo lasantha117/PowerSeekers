@@ -7,12 +7,12 @@ import jakarta.persistence.*;
 @Table(name = "answers")
 public class answers {
     @Id
-    @Column(name = "a_id", insertable = false, updatable = false)
+    @Column(name = "a_id" )
     private String a_id;
 
 
-    @Column(name = "q_id", insertable = false, updatable = false)
-    private String q_id;
+    @Column(name = "question_id")
+    private String question_id;
 
     @Column(name = "answer")
     private String answer;
@@ -30,7 +30,6 @@ public class answers {
     @JoinColumn(name = "q_id")
     private question question;
 
-
     public String getA_id() {
         return a_id;
     }
@@ -39,12 +38,12 @@ public class answers {
         this.a_id = a_id;
     }
 
-    public String getQ_id() {
-        return q_id;
+    public String getQuestion_id() {
+        return question_id;
     }
 
-    public void setQ_id(String q_id) {
-        this.q_id = q_id;
+    public void setQuestion_id(String question_id) {
+        this.question_id = question_id;
     }
 
     public String getAnswer() {
