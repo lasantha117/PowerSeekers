@@ -2,6 +2,7 @@ package UG_WebApplication.question.entity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -10,7 +11,7 @@ public class question {
 
     @JsonIgnore
     @OneToMany
-    @JoinColumn(name="q_id")
+    @JoinColumn(name = "q_id")
     private Set<answers> answers;
 
 
@@ -51,18 +52,8 @@ public class question {
         return q_type;
     }
 
-
     public void setQ_type(String q_type) {
         this.q_type = q_type;
-    }
-
-
-    public String getUniversity() {
-        return university;
-    }
-
-    public void setUniversity(String university) {
-        this.university = university;
     }
 
     public String getThequestion() {
@@ -73,6 +64,14 @@ public class question {
         this.thequestion = thequestion;
     }
 
+    public String getUniversity() {
+        return university;
+    }
+
+    public void setUniversity(String university) {
+        this.university = university;
+    }
+
     public String getDegree() {
         return degree;
     }
@@ -80,7 +79,4 @@ public class question {
     public void setDegree(String degree) {
         this.degree = degree;
     }
-
-
-
 }

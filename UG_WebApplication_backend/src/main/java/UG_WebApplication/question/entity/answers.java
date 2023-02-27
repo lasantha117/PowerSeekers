@@ -7,47 +7,36 @@ import jakarta.persistence.*;
 @Table(name = "answers")
 public class answers {
     @Id
-    @Column(name = "a_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    @Column(name = "a_id", insertable = false, updatable = false)
+    private String a_id;
 
-    @Column(name = "answer", columnDefinition = "character varying(100) not null")
-    private String answer;
 
-    @Column(name = "q_id",insertable=false, updatable=false)
+    @Column(name = "q_id", insertable = false, updatable = false)
     private String q_id;
 
-    @Column(name = "job_designation", columnDefinition = "character varying(20) not null")
+    @Column(name = "answer")
+    private String answer;
+
+
+    @Column(name = "job_designation")
     private String job_designation;
 
 
-    @Column(name = "marks", columnDefinition = "character varying(5) not null")
+    @Column(name = "marks")
     private String marks;
-
-    @Column(name = "total", columnDefinition = "character varying(5) not null")
-    private String total;
-
-
 
 
     @ManyToOne
-    @JoinColumn(name="q_id")
+    @JoinColumn(name = "q_id")
     private question question;
 
-    public String getId() {
-        return id;
+
+    public String getA_id() {
+        return a_id;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getAnswer() {
-        return answer;
-    }
-
-    public void setAnswer(String answer) {
-        this.answer = answer;
+    public void setA_id(String a_id) {
+        this.a_id = a_id;
     }
 
     public String getQ_id() {
@@ -56,6 +45,14 @@ public class answers {
 
     public void setQ_id(String q_id) {
         this.q_id = q_id;
+    }
+
+    public String getAnswer() {
+        return answer;
+    }
+
+    public void setAnswer(String answer) {
+        this.answer = answer;
     }
 
     public String getJob_designation() {
@@ -74,14 +71,6 @@ public class answers {
         this.marks = marks;
     }
 
-    public String getTotal() {
-        return total;
-    }
-
-    public void setTotal(String total) {
-        this.total = total;
-    }
-
     public UG_WebApplication.question.entity.question getQuestion() {
         return question;
     }
@@ -89,7 +78,4 @@ public class answers {
     public void setQuestion(UG_WebApplication.question.entity.question question) {
         this.question = question;
     }
-
-
-
 }
