@@ -12,7 +12,7 @@ declare function closeNav():void;
 export class AppComponent {
 
 
-  title = 'U';
+  title = 'UG_WebApplication';
 
 
 }

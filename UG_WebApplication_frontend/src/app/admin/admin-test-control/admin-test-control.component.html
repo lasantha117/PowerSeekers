@@ -108,15 +108,16 @@
 
 
   <label>Select the Degree:</label>
-  <select id="degree" name="degree" [(ngModel)]="selectedDegree" required>
-    <option *ngIf="selectedUniversity === 'moratuwa'" value="IT">IT</option>
-    <option *ngIf="selectedUniversity === 'moratuwa'" value="ITM">ITM</option>
-    <option *ngIf="selectedUniversity === 'colombo'" value="CS">CS</option>
-  </select>
-  <div *ngIf="form.submitted && form.controls['degree'].invalid" class="error-message">
-    Degree is required
-  </div>
+    <select [(ngModel)]="selectedDegree" id="degree" name="degree"  required>
+      <option value="">Select a Degree</option>
+      <option *ngIf="selectedUniversity === 'moratuwa'" value="IT">IT</option>
+      <option *ngIf="selectedUniversity === 'moratuwa'" value="ITM">ITM</option>
+      <option *ngIf="selectedUniversity === 'colombo'" value="CS">CS</option>
+    </select>
 
+    <div *ngIf="form.submitted && form.controls['degree'].invalid" class="error-message">
+      Degree is required
+    </div>
 
 
   <!--------------------get question----------------------------------------->
@@ -161,6 +162,14 @@
 
 
 <!--------------------connected add answers component----------------------------------------->
+
+
+
+<button (click)="togglePreviewQuestion()">Preview Questions</button>
+<app-preview-question *ngIf="showPreviewQuestion"></app-preview-question>
+
+<br>  <br>   <br>
+
 <app-add-answers> </app-add-answers>
 
 
