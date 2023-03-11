@@ -1,0 +1,39 @@
+
+<div class="fontcolor">
+<div class="card mt-5" style="align-items: center">
+  <h1>Question List</h1>
+</div>
+
+
+<div class="mt-5">
+  <table class="table table-bordered">
+    <thead class="thead">
+    <tr>
+      <th>Question ID</th>
+      <th>Question Type</th>
+      <th>University</th>
+      <th>Degree</th>
+      <th>The Question</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    </thead>
+
+    <tbody class="tbody">
+      <tr *ngFor="let question of question">
+        <td> {{ question.q_id }}</td>
+        <td>{{ question.q_type }} </td>
+        <td>{{ question.university }}</td>
+        <td>{{ question.degree }}</td>
+        <td>{{ question.thequestion }}</td>
+        <td><button type="button" >Edit</button></td>
+        <td><button type="button" (click)="deleteQuestion(question.q_id)">Delete</button></td>
+
+      </tr>
+
+    </tbody>
+  </table>
+
+
+</div>
+</div>

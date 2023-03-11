@@ -15,6 +15,8 @@ import { AdminTestControlComponent } from './admin/admin-test-control/admin-test
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from "@angular/common/http";
 import { AddAnswersComponent } from './admin/admin-test-control/add-answers/add-answers.component';
+import { PreviewQuestionComponent } from './admin/admin-test-control/preview-question/preview-question.component';
+
 
 
 
@@ -36,6 +38,8 @@ declarations: [
     AdminTestControlComponent,
     AppComponent,
     AddAnswersComponent,
+    PreviewQuestionComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -43,6 +47,7 @@ declarations: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -15,11 +15,10 @@ function upload(params: { ContentType: any; Bucket: string; ACL: string; Body: a
   styleUrls: ['./admin-test-control.component.css'],
 
 
-
-
 })
 export class AdminTestControlComponent {
 
+  showPreviewQuestion = false;
 
   private url: any;
   q_id: any;
@@ -52,7 +51,9 @@ export class AdminTestControlComponent {
 
 
   }
-
+  togglePreviewQuestion() {
+    this.showPreviewQuestion = !this.showPreviewQuestion;
+  }
 
 
 

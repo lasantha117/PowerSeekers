@@ -1,8 +1,6 @@
 package UG_WebApplication.question.entity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-
-import java.util.List;
 import java.util.Set;
 
 

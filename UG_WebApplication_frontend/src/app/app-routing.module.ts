@@ -10,6 +10,7 @@ import {AdminTestControlComponent} from "./admin/admin-test-control/admin-test-c
 import {AddAnswersComponent} from "./admin/admin-test-control/add-answers/add-answers.component";
 import {VacancyDisplayComponent} from "./vacancy-display/vacancy-display.component";
 import {VacancyAddComponent} from "./vacancy-add/vacancy-add.component";
+import {PreviewQuestionComponent} from "./admin/admin-test-control/preview-question/preview-question.component";
 
 
 const routes: Routes = [
@@ -59,6 +60,11 @@ const routes: Routes = [
   {
     path:'vacancy-add',
     component:VacancyAddComponent
+  },
+
+  {
+    path:'preview-question',
+    component:PreviewQuestionComponent
   },
 
 ];
