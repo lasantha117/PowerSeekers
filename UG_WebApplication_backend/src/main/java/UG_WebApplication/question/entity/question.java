@@ -18,8 +18,7 @@ public class question {
     @Column(name = "q_id" ,insertable=false, updatable=false)
     private String q_id;
 
-    @Column(name = "q_type")
-    private String q_type;
+
 
     @Column(name = "thequestion")
     private String thequestion;
@@ -44,14 +43,6 @@ public class question {
 
     public void setQ_id(String q_id) {
         this.q_id = q_id;
-    }
-
-    public String getQ_type() {
-        return q_type;
-    }
-
-    public void setQ_type(String q_type) {
-        this.q_type = q_type;
     }
 
     public String getThequestion() {

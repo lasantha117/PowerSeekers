@@ -15,13 +15,12 @@ function upload(params: { ContentType: any; Bucket: string; ACL: string; Body: a
 })
 export class AddAnswersComponent {
 
-  a_id: any;
+  a_id  : any;
   question_id: any;
   answer : any;
   jobPosition: any;
   marks: any;
   showScore = false;
-
 
 
   AnswerSubmit() {
@@ -36,6 +35,8 @@ export class AddAnswersComponent {
     };
 
 
+
+
     this.http.post(url, data).subscribe(
       res => {
         console.log(res);
@@ -43,17 +44,31 @@ export class AddAnswersComponent {
       },
       err => {
         console.log(err);
-        alert('Error saving question.');
+        alert('Error saving Answers');
       });
-
-
-
   }
+
   onJobPositionChange() {
     this.showScore = !!this.jobPosition;
   }
 
+  getQid() {
+    this.http.get('http://localhost:8080/getAnswers').subscribe(
+      (resp) => {
+        console.log(resp);
+        this.answer = resp;
+      },
 
-  constructor(private router: Router,private http: HttpClient) {
+      (err) => {
+        console.log(err);
+      }
+    )
   }
+
+
+
+
+
+  constructor(private router: Router, private http: HttpClient) {}
+
 }
