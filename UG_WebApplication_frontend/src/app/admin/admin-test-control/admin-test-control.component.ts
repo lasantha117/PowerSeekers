@@ -18,7 +18,10 @@ function upload(params: { ContentType: any; Bucket: string; ACL: string; Body: a
 })
 export class AdminTestControlComponent {
 
+
+
   showPreviewQuestion = false;
+  showPreviewAnswers = false;
 
   private url: any;
   q_id: any;
@@ -26,6 +29,11 @@ export class AdminTestControlComponent {
   selectedUniversity: any;
   selectedDegree: any;
   thequestion:any;
+
+
+
+
+
 
 
 
@@ -51,16 +59,24 @@ export class AdminTestControlComponent {
 
 
   }
+
+
   togglePreviewQuestion() {
     this.showPreviewQuestion = !this.showPreviewQuestion;
   }
 
 
+  togglePreviewAnswers() {
+    this.showPreviewAnswers = !this.showPreviewAnswers;
+  }
 
 
 
   constructor(private router: Router,private http: HttpClient) {
-  }}
+  }
+
+
+}
 
 
 

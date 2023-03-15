@@ -2,26 +2,29 @@ package UG_WebApplication.question.controllers;
 
 import UG_WebApplication.question.entity.answers;
 import UG_WebApplication.question.entity.question;
-
-import UG_WebApplication.question.services.questionService;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import UG_WebApplication.question.services.answersService;
+import UG_WebApplication.question.services.questionService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RestController;
+
 import java.util.List;
+
+
 
 
 
 @CrossOrigin("http://localhost:4200/")
 @RestController
-public class HomeController {
+class questionController{
 
 
-    @Autowired
+    final
     questionService questionService;
 
+    public questionController(questionService questionService) {
+        this.questionService = questionService;
+    }
 
 
     @GetMapping("getQuestion")
@@ -69,11 +72,15 @@ public class HomeController {
 class answerController {
 
 
-    @Autowired
+    final
     answersService answersService;
 
+    public answerController(answersService answersService) {
+        this.answersService = answersService;
+    }
 
-   @GetMapping("getAnswers")
+
+    @GetMapping("getAnswers")
    public List<answers> getAnswers() {
        return answersService.getAnswers();
 
@@ -86,6 +93,10 @@ class answerController {
 
     }
 
+    @DeleteMapping("deleteAnswers")
+    public void deleteAnswers(@RequestParam String a_id) {
+        answersService.deleteAnswers(a_id);
+    }
 
 
 

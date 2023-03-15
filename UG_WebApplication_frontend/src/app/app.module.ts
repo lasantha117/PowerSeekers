@@ -16,6 +16,8 @@ import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from "@angular/common/http";
 import { AddAnswersComponent } from './admin/admin-test-control/add-answers/add-answers.component';
 import { PreviewQuestionComponent } from './admin/admin-test-control/preview-question/preview-question.component';
+import { PreviewAnswersComponent } from './admin/admin-test-control/preview-answers/preview-answers.component';
+
 
 
 
@@ -39,6 +41,8 @@ declarations: [
     AppComponent,
     AddAnswersComponent,
     PreviewQuestionComponent,
+    PreviewAnswersComponent,
+
 
   ],
   imports: [

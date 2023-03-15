@@ -29,7 +29,9 @@ public class answersService {
     }
 
 
-
+    public void deleteAnswers(String a_id) {
+        answersRepository.deleteById(a_id);
+    }
 
 }
 

@@ -1,23 +1,16 @@
 <div class="formFont">
-
-
-  <form  #form="ngForm" (ngSubmit)=" AnswerSubmit()">
-
-
+  <form #form="ngForm" (ngSubmit)="AnswerSubmit()">
     <label>Answer ID:</label>
-    <input type="text" [(ngModel)]="a_id" name="answerId" required>
 
+    <input type="text" [(ngModel)]="a_id" name="a_id" required>
+    <br><br>
 
     <label>Question ID:</label>
     <input type="text" [(ngModel)]="question_id" name="question_id" required>
     <br><br>
-
-
     <label>Answer:</label>
     <input type="text" [(ngModel)]="answer" name="answer" required>
-
     <br><br>
-
     <label>Job Position:</label>
     <select [(ngModel)]="jobPosition" name="jobPosition" (change)="onJobPositionChange()" required>
       <option value="">Select a job position</option>
@@ -41,14 +34,12 @@
         <option *ngFor="let i of [0,1,2,3,4,5]" [value]="i">{{i}}</option>
       </select>
 
+
+
+
       <br><br>
     </div>
-
-
-      <button type="submit">Submit</button>
-      <button type="reset">Clear</button>
-
+    <button type="submit" >Submit</button>
+    <button type="reset">Clear</button>
   </form>
-
-
 </div>

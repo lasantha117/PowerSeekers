@@ -132,12 +132,7 @@
   <br><br><br>
 
 
-  <label>Question Type:</label>
-  <input type="text" [(ngModel)]="q_type" name="q_type" required><br>
-  <div *ngIf="form.submitted && form.controls['q_type'].invalid" class="error-message">
-    Question Type is required
-  </div>
-  <br><br><br>
+
 
   <label>The Question:</label>
   <input type="text" [(ngModel)]="thequestion" name="thequestion" required><br>
@@ -173,6 +168,8 @@
 <app-add-answers> </app-add-answers>
 
 
+<button (click)="togglePreviewAnswers()">Preview Answers</button>
+<app-preview-answers *ngIf="showPreviewAnswers"></app-preview-answers>
 
 
 

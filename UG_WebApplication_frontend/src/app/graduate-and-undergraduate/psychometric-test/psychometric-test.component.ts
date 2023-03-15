@@ -13,11 +13,6 @@ export class PsychometricTestComponent {
 
   }
 
-  imageUrl1: any;
-  imageUrl2: any;
-  imageUrl3: any;
-  imageUrl4: any;
-
 
 
 

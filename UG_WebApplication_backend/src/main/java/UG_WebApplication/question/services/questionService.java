@@ -36,7 +36,7 @@ public class questionService {
             throw new RuntimeException("Question not found for this id: " + q_id);
         }
     question updatedQuestion = existingQuestion.get();
-    updatedQuestion.setQ_type(question.getQ_type());
+
     updatedQuestion.setUniversity(question.getUniversity());
     updatedQuestion.setDegree(question.getDegree());
     updatedQuestion.setThequestion(question.getThequestion());

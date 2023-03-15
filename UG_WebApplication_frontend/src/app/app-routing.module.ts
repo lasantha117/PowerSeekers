@@ -4,13 +4,15 @@ import {HomeComponent} from "./home/home.component";
 import {StudentLoginComponent} from "./graduate-and-undergraduate/student-login/student-login.component";
 import {CompanyLoginComponent} from "./company/company-login/company-login.component";
 import {IndexComponent} from "./index/index.component";
-import {PsychometricTestComponent} from "./graduate-and-undergraduate/psychometric-test/psychometric-test.component";
+
 import {AdminDashboardComponent} from "./admin/admin-dashboard/admin-dashboard.component";
 import {AdminTestControlComponent} from "./admin/admin-test-control/admin-test-control.component";
 import {AddAnswersComponent} from "./admin/admin-test-control/add-answers/add-answers.component";
 import {VacancyDisplayComponent} from "./vacancy-display/vacancy-display.component";
 import {VacancyAddComponent} from "./vacancy-add/vacancy-add.component";
 import {PreviewQuestionComponent} from "./admin/admin-test-control/preview-question/preview-question.component";
+import {PreviewAnswersComponent} from "./admin/admin-test-control/preview-answers/preview-answers.component";
+import {PsychometricTestComponent} from "./graduate-and-undergraduate/psychometric-test/psychometric-test.component";
 
 
 const routes: Routes = [
@@ -34,10 +36,7 @@ const routes: Routes = [
     component:CompanyLoginComponent
   },
 
-  {
-    path:'psychometric-test',
-    component:PsychometricTestComponent
-  },
+
   {
     path:'admin-dashboard',
     component:AdminDashboardComponent
@@ -64,8 +63,19 @@ const routes: Routes = [
 
   {
     path:'preview-question',
-    component:PreviewQuestionComponent
+   component:PreviewQuestionComponent
   },
+
+  {
+    path:'preview-answers',
+    component:PreviewAnswersComponent
+  },
+
+  {
+    path:'psychometric-test',
+    component:PsychometricTestComponent
+  }
+
 
 ];
 
