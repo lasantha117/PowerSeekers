@@ -1,39 +1,38 @@
 
+<body>
+
+
 <div class="fontcolor">
   <div class="card mt-5" style="align-items: center">
-    <h1>Question List</h1>
+    <h1>Answers List</h1>
   </div>
 
 
   <div class="mt-5">
+    <div class="scroll">
     <table class="table table-bordered">
       <thead class="thead">
       <tr>
         <th>Answer ID</th>
-
         <th>Question ID</th>
         <th>Answer</th>
-        <th>job designation</th>
-        <th>Marks</th>
         <th>Delete</th>
       </tr>
       </thead>
 
       <tbody class="tbody">
       <tr *ngFor="let answer of  answer">
-        <td> {{  answer.a_id }}</td>
-        <td>{{  answer.q_id }}</td>
-        <td>{{  answer.answer }}</td>
-        <td>{{  answer.job_designation }}</td>
-        <td>{{  answer.marks }}</td>
-
+        <td> {{answer.a_id }}</td>
+        <td>{{ answer.q_id }}</td>
+        <td>{{ answer.answer }}</td>
         <td><button type="button" (click)="deleteAnswers(answer.a_id)">Delete</button></td>
-
       </tr>
 
       </tbody>
-    </table>
 
+    </table>
+    </div>
 
   </div>
-</div>
+</div><br><br><br><br><br><br><br>
+</body>

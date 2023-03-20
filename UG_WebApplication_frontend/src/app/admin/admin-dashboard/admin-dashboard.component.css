@@ -90,18 +90,23 @@ align-items: center;
 
 .centerImg{
   text-align:center;
+  margin: auto;
 }
 .bottomleft {
   position: absolute;
   bottom: 30px;
   left: 300px;
   font-size: 18px;
+  display: flex;
+  margin: auto;
 }
 .bottomright {
   position: absolute;
   bottom: 30px;
   right: 300px;
   font-size: 18px;
+  display: flex;
+  margin: auto;
 }
 
 
@@ -110,16 +115,23 @@ align-items: center;
   top: 30px;
   left: 300px;
   font-size: 18px;
+  display: flex;
+  margin: auto;
 }
 .topright {
   position: absolute;
   top: 30px;
   right: 300px;
   font-size: 18px;
+  display: flex;
+  margin: auto;
+
 }
 .responsive-image {
   max-width: 100%;
   height: auto;
+  display: flex;
+  margin: auto;
 }
 
 
@@ -127,24 +139,28 @@ align-items: center;
 .responsive-image {
   max-width: 100%;
   height: auto;
+  margin: auto;
 }
 
 
 @media (min-width: 768px) {
   .responsive-image {
     max-width: 50%;
+    margin: auto;
   }
 }
 
 @media (min-width: 992px) {
   .responsive-image {
     max-width: 33%;
+    margin: auto;
   }
 }
 
 @media (min-width: 1200px) {
   .responsive-image {
     max-width: 25%;
+    margin: auto;
   }
 }
 

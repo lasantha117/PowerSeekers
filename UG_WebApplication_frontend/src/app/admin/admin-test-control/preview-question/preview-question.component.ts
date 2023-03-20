@@ -19,7 +19,7 @@ export class PreviewQuestionComponent implements OnInit {
 
 
   ngOnInit() {
-    this.http.get('http://localhost:8080/getQuestion').subscribe(
+    this.http.get('http://localhost:8080/getQuestionAdmin').subscribe(
       (resp) => {
         console.log(resp);
         this.question = resp;

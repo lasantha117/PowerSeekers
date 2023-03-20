@@ -3,3 +3,29 @@
 {
   color: #FFFFFF;
 }
+div.scroll {
+  border: 3px solid black;
+  height: 700px;
+  width: 700px;
+  overflow-x: scroll;
+
+}
+td, th {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+body{
+  background: url('/assets/img/adminMain.jpg') no-repeat center center fixed;
+  justify-content: center;
+
+  display: flex;
+
+
+
+  font-family: 'Montserrat', sans-serif;
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+
+
+}

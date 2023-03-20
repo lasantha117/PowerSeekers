@@ -16,21 +16,17 @@ function upload(params: { ContentType: any; Bucket: string; ACL: string; Body: a
 export class AddAnswersComponent {
 
   a_id  : any;
-  question_id: any;
+  q_id: any;
   answer : any;
-  jobPosition: any;
-  marks: any;
-  showScore = false;
+
 
 
   AnswerSubmit() {
     const url = 'http://localhost:8080/addAnswers';
     const data = {
       a_id: this.a_id,
-      question_id: this.question_id,
+      q_id: this.q_id,
       answer:this.answer,
-      job_designation: this.jobPosition,
-      marks:this.marks
 
     };
 
@@ -48,9 +44,7 @@ export class AddAnswersComponent {
       });
   }
 
-  onJobPositionChange() {
-    this.showScore = !!this.jobPosition;
-  }
+
 
   getQid() {
     this.http.get('http://localhost:8080/getAnswers').subscribe(

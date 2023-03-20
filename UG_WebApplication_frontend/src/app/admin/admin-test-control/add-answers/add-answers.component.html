@@ -6,40 +6,15 @@
     <br><br>
 
     <label>Question ID:</label>
-    <input type="text" [(ngModel)]="question_id" name="question_id" required>
+    <input type="text" [(ngModel)]="q_id" name="question_id" required>
     <br><br>
     <label>Answer:</label>
     <input type="text" [(ngModel)]="answer" name="answer" required>
     <br><br>
-    <label>Job Position:</label>
-    <select [(ngModel)]="jobPosition" name="jobPosition" (change)="onJobPositionChange()" required>
-      <option value="">Select a job position</option>
-      <option value="Junior Software Developer">Junior Software Developer</option>
-      <option value="Technical Support Engineer">Technical Support Engineer</option>
-      <option value="Quality Assurance Analyst">Quality Assurance Analyst</option>
-      <option value="Network Administrator">Network Administrator</option>
-      <option value="Front-End Web Developer">Front-End Web Developer</option>
-      <option value="UX Designer">UX Designer</option>
-      <option value="Mobile Application Developer">Mobile Application Developer</option>
-      <option value="Game Developer">Game Developer</option>
-      <option value="Game Designer">Game Designer</option>
-      <option value="Graphic Designer">Graphic Designer</option>
-      <option value="Web Designer">Web Designer</option>
-    </select>
-    <br><br>
-    <div *ngIf="showScore">
-      <label>Score:</label>
-      <select [(ngModel)]="marks" name="marks" required>
-        <option value="">Select a score</option>
-        <option *ngFor="let i of [0,1,2,3,4,5]" [value]="i">{{i}}</option>
-      </select>
-
-
-
-
-      <br><br>
-    </div>
     <button type="submit" >Submit</button>
     <button type="reset">Clear</button>
+
+    <br><br> <br>
   </form>
 </div>
+

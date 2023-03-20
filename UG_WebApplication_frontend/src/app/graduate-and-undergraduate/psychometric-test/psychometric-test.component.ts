@@ -14,7 +14,9 @@ export class PsychometricTestComponent {
   }
 
 
-
+  GoFirst(){
+    this.router.navigate(['/first-question']);
+  }
 
 
 

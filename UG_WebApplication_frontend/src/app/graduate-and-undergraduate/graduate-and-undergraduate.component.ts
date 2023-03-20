@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class GraduateAndUndergraduateComponent {
 
+
+  indexBackground:string ="assets/img/test_bg.jpg"
+  BgSize:string="20px";
 }

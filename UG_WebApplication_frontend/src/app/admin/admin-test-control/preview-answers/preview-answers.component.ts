@@ -9,11 +9,10 @@ import {HttpClient} from "@angular/common/http";
 export class PreviewAnswersComponent implements OnInit {
   answer: any;
   a_id: any;
+  q_id:any;
 
   constructor(private http: HttpClient) {
   }
-
-
 
 
   ngOnInit() {
@@ -30,7 +29,11 @@ export class PreviewAnswersComponent implements OnInit {
     )
 
 
+
+
+
   }
+
 
 
   private deleteUrl = 'http://localhost:8080/deleteAnswers';
@@ -51,16 +54,6 @@ export class PreviewAnswersComponent implements OnInit {
       }
     );
   }
-
-
-
-
-
-
-
-
-
-
 
 
 
