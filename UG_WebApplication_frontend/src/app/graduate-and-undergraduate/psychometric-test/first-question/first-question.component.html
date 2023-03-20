@@ -1,0 +1,20 @@
+
+<html lang="en" >
+<head>
+  <title> Psychometric-test</title>
+</head>
+
+<body>
+<div class="fontcolor">
+<p>first-question works!</p>
+
+  <h2>Random Question and Answer List:</h2>
+  <tr *ngFor="let marks of questions">
+    <h2>{{ questions.thequestion }}</h2>
+    <td> {{answers.answer }}</td>
+
+    <td> {{answers.marks}}points)</td>
+  </tr>
+</div>
+
+</body>
