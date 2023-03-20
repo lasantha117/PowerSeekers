@@ -13,8 +13,6 @@ public class question {
     @Column(name = "q_type", columnDefinition = "character varying(15) not null")
     private String q_type;
 
-    @Column(name = "uni_ID", columnDefinition = "character varying(15) not null")
-    private String uni_ID;
 
 
     public String getQ_id() {
@@ -33,11 +31,5 @@ public class question {
         this.q_type = q_type;
     }
 
-    public String getUni_ID() {
-        return uni_ID;
-    }
 
-    public void setUni_ID(String uni_ID) {
-        this.uni_ID = uni_ID;
-    }
 }

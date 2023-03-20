@@ -3,6 +3,24 @@
   margin: 20px auto;
 }
 
+body{
+  background: url('/assets/img/vacancy-apply.jpg') no-repeat center center fixed;
+  justify-content: center;
+
+  display: flex;
+
+  height: 100vh;
+  margin: -20px 0 50px;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+
+
 .heading {
   text-align: center;
   margin-bottom: 50px;
@@ -18,7 +36,7 @@
   /*margin: 20px;*/
   width: 95%;
   border: none;
-  border-bottom: 2px solid black;
+  border-bottom: 3px solid red;
 }
 
 .frm-apply input:focus {
@@ -26,8 +44,12 @@
   border-bottom: 2px solid #C20909;
 }
 
-.buttons{
-  align-: center;
+.buttons {
+  grid-column: 1 / span 2;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  /*align-: center;*/
 }
 
 @media screen and (max-width: 950px) {
