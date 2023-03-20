@@ -85,7 +85,7 @@
 
 
 
-
+<br><br><br>  <br><br><br>
 
 <h1>Questions Data</h1>
 
@@ -140,15 +140,11 @@
     The Question  is required
   </div>
 
-  <br><br><br>
-
-
-
   <br>
 
     <button type="submit">Submit</button>
     <button type="reset">Clear</button>
-    <br>  <br>   <br>
+    <br>
 
 </form>
 
@@ -159,19 +155,40 @@
 <!--------------------connected add answers component----------------------------------------->
 
 
-
+<br><br>
 <button (click)="togglePreviewQuestion()">Preview Questions</button>
 <app-preview-question *ngIf="showPreviewQuestion"></app-preview-question>
 
 <br>  <br>   <br>
-
+<h1>Answers Data</h1>
+<br>  <br>
 <app-add-answers> </app-add-answers>
+
+
+
 
 
 <button (click)="togglePreviewAnswers()">Preview Answers</button>
 <app-preview-answers *ngIf="showPreviewAnswers"></app-preview-answers>
 
 
+
+<br>  <br><br>  <br><br>  <br>
+
+<!--------------------connected  vacancy marks component----------------------------------------->
+
+
+<h1>Answers Marks to Answers</h1>
+<br>  <br>
+<app-add-marks> </app-add-marks>
+
+
+
+
+<button (click)="togglePreviewVacancyMarks()">Preview </button>
+
+<app-preview-vacancy-marks *ngIf="PreviewVacancyMarks"></app-preview-vacancy-marks>
+<br>  <br>   <br><br>  <br>   <br>
 
 
 </body>

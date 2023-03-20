@@ -22,6 +22,7 @@ export class AdminTestControlComponent {
 
   showPreviewQuestion = false;
   showPreviewAnswers = false;
+  PreviewVacancyMarks= false;
 
   private url: any;
   q_id: any;
@@ -69,6 +70,16 @@ export class AdminTestControlComponent {
   togglePreviewAnswers() {
     this.showPreviewAnswers = !this.showPreviewAnswers;
   }
+
+
+  togglePreviewVacancyMarks() {
+    this.PreviewVacancyMarks = !this.PreviewVacancyMarks;
+  }
+
+
+
+
+
 
 
 
