@@ -1,0 +1,194 @@
+<head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+  </style>
+</head>
+<body>
+
+<!----------------------------------- Side menu ---------------------------------->
+<div class="wrapper">
+ <!--Top menu -->
+  <div class="sidebar">
+
+    <!--profile image & text-->
+    <div class="profile">
+      <h3>Alan Roy</h3>
+      <p>Admin 01</p>
+    </div>
+    <!--menu item-->
+
+    <ul>
+      <li>
+        <a routerLink="/admin-dashboard">
+          <span class="item">Main Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"><i class="fas fa-desktop"></i></span>
+          <span class="item">Profile Issue</span>
+        </a>
+      </li>
+      <li>
+        <a href="#"class="active">
+          <span class="icon"><i class="fas fa-user-friends"></i></span>
+          <span class="item">Test Control</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+          <span class="item">Newsfeed Control</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+
+          <span class="item">Community Control</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"><i class="fas fa-chart-line"></i></span>
+          <span class="item">Company Activity</span>
+        </a>
+      </li>
+      <li>
+
+
+        <br><br><br><br><br><br><br><br><br><br>
+
+
+
+        <a href="#">
+          <span class="icon"><i class="fas fa-cog"></i></span>
+          <span class="item">Settings</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"><i class="fas fa-cog"></i></span>
+          <span class="item">SignOut</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+
+
+
+
+<br><br><br>  <br><br><br>
+
+<h1>Questions Data</h1>
+
+<div class="formFont">
+  <br><br><br>
+
+
+  <!--------------------select degree----------------------------------------->
+  <form  #form="ngForm" (ngSubmit)="onSubmit()">
+
+
+  <label>Select the University:</label>
+  <select id="university" name="university" [(ngModel)]="selectedUniversity" required>
+    <option value="moratuwa">University of Moratuwa</option>
+    <option value="colombo">University of Colombo</option>
+  </select>
+  <div *ngIf="form.submitted && form.controls['university'].invalid" class="error-message">
+    University is required
+  </div>
+
+
+  <label>Select the Degree:</label>
+    <select [(ngModel)]="selectedDegree" id="degree" name="degree"  required>
+      <option value="">Select a Degree</option>
+      <option *ngIf="selectedUniversity === 'moratuwa'" value="IT">IT</option>
+      <option *ngIf="selectedUniversity === 'moratuwa'" value="ITM">ITM</option>
+      <option *ngIf="selectedUniversity === 'colombo'" value="CS">CS</option>
+    </select>
+
+    <div *ngIf="form.submitted && form.controls['degree'].invalid" class="error-message">
+      Degree is required
+    </div>
+
+
+  <!--------------------get question----------------------------------------->
+<br><br><br>
+
+  <label>Question ID:</label>
+  <input type="text" [(ngModel)]="q_id" name="q_id" required><br>
+
+  <div *ngIf="form.submitted && form.controls['q_id'].invalid" class="error-message">
+    Question ID is required
+  </div>
+  <br><br><br>
+
+
+
+
+  <label>The Question:</label>
+  <input type="text" [(ngModel)]="thequestion" name="thequestion" required><br>
+  <div *ngIf="form.submitted && form.controls['thequestion'].invalid" class="error-message">
+    The Question  is required
+  </div>
+
+  <br>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Clear</button>
+    <br>
+
+</form>
+
+</div>
+
+
+
+<!--------------------connected add answers component----------------------------------------->
+
+
+<br><br>
+<button (click)="togglePreviewQuestion()">Preview Questions</button>
+<app-preview-question *ngIf="showPreviewQuestion"></app-preview-question>
+
+<br>  <br>   <br>
+<h1>Answers Data</h1>
+<br>  <br>
+<app-add-answers> </app-add-answers>
+
+
+
+
+
+<button (click)="togglePreviewAnswers()">Preview Answers</button>
+<app-preview-answers *ngIf="showPreviewAnswers"></app-preview-answers>
+
+
+
+<br>  <br><br>  <br><br>  <br>
+
+<!--------------------connected  vacancy marks component----------------------------------------->
+
+
+<h1>Answers Marks to Answers</h1>
+<br>  <br>
+<app-add-marks> </app-add-marks>
+
+
+
+
+<button (click)="togglePreviewVacancyMarks()">Preview </button>
+
+<app-preview-vacancy-marks *ngIf="PreviewVacancyMarks"></app-preview-vacancy-marks>
+<br>  <br>   <br><br>  <br>   <br>
+
+
+</body>

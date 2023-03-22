@@ -1,0 +1,38 @@
+<body>
+<div class="fontcolor">
+  <div class="card mt-5" style="align-items: center">
+    <h1>Answers List</h1>
+  </div>
+
+
+  <div class="mt-5">
+    <div class="scroll">
+      <table class="table table-bordered">
+        <thead class="thead">
+        <tr>
+          <th>Marks ID</th>
+
+          <th>Answer ID</th>
+          <th>Job Title</th>
+          <th>Marks</th>
+          <th>Delete</th>
+        </tr>
+        </thead>
+
+<tr *ngFor="let marks of  marks">
+  <td> {{marks.marks_id }}</td>
+
+  <td> {{marks.a_id}}</td>
+  <td> {{marks.job_title}}</td>
+  <td> {{marks.marks}}</td>
+  <td><button type="button" (click)="deleteMarks(marks.marks_id)">Delete</button></td>
+</tr>
+
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<br><br><br><br><br><br><br><br><br>
+</body>

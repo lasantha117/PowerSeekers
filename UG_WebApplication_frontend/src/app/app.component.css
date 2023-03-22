@@ -1,0 +1,16 @@
+/* Footer*/
+
+footer {
+  background-color: #222;
+  color: #fff;
+  font-size: 10px;
+  bottom: 0;
+  position: Fixed;
+  left: 0;
+  right: 0;
+  text-align: center;
+
+}
+
+
+
