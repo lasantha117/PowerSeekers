@@ -1,271 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-<<<<<<< Updated upstream
-    <list default="true" id="742e7f96-7662-4ed4-9991-c536f5e7d710" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UG_WebApplication_backend/P_Test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UG_WebApplication_frontend/.angular/cache/15.0.5/angular-webpack/f227734bc070cde776ab44be511ca0d0a71b7442/1.pack" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UG_WebApplication_frontend/.angular/cache/15.0.5/angular-webpack/f227734bc070cde776ab44be511ca0d0a71b7442/index.pack.old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="cfaddd92-f9a3-4e7a-a1ad-467ea4302e7f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/UG_WebApplication_backend/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UG_WebApplication_backend/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UG_WebApplication_backend/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UG_WebApplication_frontend/.angular/cache/15.0.5/angular-webpack/f227734bc070cde776ab44be511ca0d0a71b7442/8.pack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UG_WebApplication_frontend/.angular/cache/15.0.5/angular-webpack/f227734bc070cde776ab44be511ca0d0a71b7442/9.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_3_22_2023_11_23_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_3_22_2023_11_23_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-=======
-    <list default="true" id="946dec69-5f4f-404f-bebc-ca17d59f073c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-dashboard/admin-dashboard.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-dashboard/admin-dashboard.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-dashboard/admin-dashboard.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-login/admin-login.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-login/admin-login.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-login/admin-login.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-login/admin-login.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-sign-up/admin-sign-up.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-sign-up/admin-sign-up.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-sign-up/admin-sign-up.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-sign-up/admin-sign-up.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-test-control/add-answers/add-answers.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-test-control/add-answers/add-answers.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-test-control/add-answers/add-answers.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-test-control/add-answers/add-answers.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-test-control/add-marks/add-marks.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-test-control/add-marks/add-marks.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-test-control/add-marks/add-marks.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-test-control/add-marks/add-marks.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-test-control/admin-test-control.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-test-control/admin-test-control.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-test-control/admin-test-control.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-test-control/preview-answers/preview-answers.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-test-control/preview-answers/preview-answers.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-test-control/preview-answers/preview-answers.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-test-control/preview-answers/preview-answers.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-test-control/preview-question/preview-question.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-test-control/preview-question/preview-question.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-test-control/preview-question/preview-question.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-test-control/preview-question/preview-question.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-test-control/preview-vacancy-marks/preview-vacancy-marks.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-test-control/preview-vacancy-marks/preview-vacancy-marks.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-test-control/preview-vacancy-marks/preview-vacancy-marks.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin-test-control/preview-vacancy-marks/preview-vacancy-marks.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/admin/admin.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/app-routing.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/app.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/app.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/app.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/graduate-and-undergraduate.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/eighteenth-question/eighteenth-question.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/eighteenth-question/eighteenth-question.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/eighteenth-question/eighteenth-question.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/eighteenth-question/eighteenth-question.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/eighth-question/eighth-question.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/eighth-question/eighth-question.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/eighth-question/eighth-question.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/eighth-question/eighth-question.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/eleventh-question/eleventh-question.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/eleventh-question/eleventh-question.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/eleventh-question/eleventh-question.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/eleventh-question/eleventh-question.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/fifteenth-question/fifteenth-question.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/fifteenth-question/fifteenth-question.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/fifteenth-question/fifteenth-question.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/fifteenth-question/fifteenth-question.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/fifth-question/fifth-question.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/fifth-question/fifth-question.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/fifth-question/fifth-question.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/fifth-question/fifth-question.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/first-question/first-question.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/first-question/first-question.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/first-question/first-question.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/first-question/first-question.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/fourteenth-question/fourteenth-question.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/fourteenth-question/fourteenth-question.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/fourteenth-question/fourteenth-question.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/fourteenth-question/fourteenth-question.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/fourth-question/fourth-question.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/fourth-question/fourth-question.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/fourth-question/fourth-question.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/fourth-question/fourth-question.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/nineteenth-question/nineteenth-question.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/nineteenth-question/nineteenth-question.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/nineteenth-question/nineteenth-question.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/nineteenth-question/nineteenth-question.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/ninth-question/ninth-question.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/ninth-question/ninth-question.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/ninth-question/ninth-question.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/ninth-question/ninth-question.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/psychometric-test.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/psychometric-test.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/psychometric-test.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/results/results.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/results/results.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/results/results.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/results/results.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/second-question/second-question.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/second-question/second-question.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/second-question/second-question.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/second-question/second-question.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/seventeenth-question/seventeenth-question.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/seventeenth-question/seventeenth-question.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/seventeenth-question/seventeenth-question.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/seventeenth-question/seventeenth-question.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/seventh-question/seventh-question.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/seventh-question/seventh-question.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/seventh-question/seventh-question.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/seventh-question/seventh-question.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/sixteenth-question/sixteenth-question.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/sixteenth-question/sixteenth-question.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/sixteenth-question/sixteenth-question.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/sixteenth-question/sixteenth-question.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/sixth-question/sixth-question.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/sixth-question/sixth-question.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/sixth-question/sixth-question.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/sixth-question/sixth-question.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/tenth-question/tenth-qustion.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/tenth-question/tenth-qustion.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/tenth-question/tenth-qustion.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/tenth-question/tenth-qustion.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/third-question/third-question.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/third-question/third-question.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/third-question/third-question.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/third-question/third-question.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/thirteenth-question/thirteenth-question.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/thirteenth-question/thirteenth-question.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/thirteenth-question/thirteenth-question.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/thirteenth-question/thirteenth-question.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/twelfth-question/twelfth-question.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/twelfth-question/twelfth-question.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/twelfth-question/twelfth-question.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/twelfth-question/twelfth-question.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/twentieth-question/twentieth-question.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/twentieth-question/twentieth-question.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/twentieth-question/twentieth-question.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/psychometric-test/twentieth-question/twentieth-question.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/student-login/student-login.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/graduate-and-undergraduate/student-login/student-login.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/home/home.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/image-service.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/image-service.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/index/index.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/question.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/app/question.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/assets/JavaScript/test_button.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/assets/img/Psychometric-test.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/assets/img/admin_login.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/assets/img/background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/assets/img/question_bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/assets/img/test_bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/src/index.html" beforeDir="false" />
->>>>>>> Stashed changes
+      <change beforePath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/QuestionApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/QuestionApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/controllers/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/controllers/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/controllers/answerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/controllers/answerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/controllers/answersmarksController$UserQuestionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/controllers/answersmarksController$UserQuestionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/controllers/answersmarksController.class" beforeDir="false" afterPath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/controllers/answersmarksController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/controllers/questionController$QuestionRowMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/controllers/questionController$QuestionRowMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/controllers/questionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/controllers/questionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/entity/admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/entity/admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/entity/answers.class" beforeDir="false" afterPath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/entity/answers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/entity/answersmarks.class" beforeDir="false" afterPath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/entity/answersmarks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/entity/question.class" beforeDir="false" afterPath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/entity/question.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/entity/user.class" beforeDir="false" afterPath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/entity/user.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/repositories/AdminRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/repositories/AdminRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/repositories/answersRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/repositories/answersRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/repositories/answersmarksRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/repositories/answersmarksRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/repositories/questionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/repositories/questionRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/repositories/userQuestionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/repositories/userQuestionRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/repositories/userRepository$UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/repositories/userRepository$UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/repositories/userRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/repositories/userRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/services/AdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/services/AdminService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/services/answersService.class" beforeDir="false" afterPath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/services/answersService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/services/answersmarksService.class" beforeDir="false" afterPath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/services/answersmarksService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/services/questionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/services/questionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/services/userQuestionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/UG_WebApplication_backend/target/classes/UG_WebApplication/services/userQuestionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UG_WebApplication_backend/target/test-classes/UG_WebApplication/QuestionApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/UG_WebApplication_backend/target/test-classes/UG_WebApplication/QuestionApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/.angular/cache/15.0.5/angular-webpack/f227734bc070cde776ab44be511ca0d0a71b7442/2.pack" beforeDir="false" afterPath="$PROJECT_DIR$/UG_WebApplication_frontend/.angular/cache/15.0.5/angular-webpack/f227734bc070cde776ab44be511ca0d0a71b7442/2.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/.angular/cache/15.0.5/angular-webpack/f227734bc070cde776ab44be511ca0d0a71b7442/4.pack" beforeDir="false" afterPath="$PROJECT_DIR$/UG_WebApplication_frontend/.angular/cache/15.0.5/angular-webpack/f227734bc070cde776ab44be511ca0d0a71b7442/4.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/.angular/cache/15.0.5/angular-webpack/f227734bc070cde776ab44be511ca0d0a71b7442/6.pack" beforeDir="false" afterPath="$PROJECT_DIR$/UG_WebApplication_frontend/.angular/cache/15.0.5/angular-webpack/f227734bc070cde776ab44be511ca0d0a71b7442/6.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/.angular/cache/15.0.5/angular-webpack/f227734bc070cde776ab44be511ca0d0a71b7442/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/UG_WebApplication_frontend/.angular/cache/15.0.5/angular-webpack/f227734bc070cde776ab44be511ca0d0a71b7442/index.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UG_WebApplication_frontend/.angular/cache/15.0.5/angular-webpack/f227734bc070cde776ab44be511ca0d0a71b7442/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/UG_WebApplication_frontend/.angular/cache/15.0.5/angular-webpack/f227734bc070cde776ab44be511ca0d0a71b7442/index.pack.old" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="ProjectId" id="2NNOYMOzd59OAvVc2lWOWbAHMic" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< Updated upstream
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm",
-    "spring.configuration.checksum": "074456182a35870774999111186a3dae"
-  }
-}]]></component>
-  <component name="RunManager" selected="npm.Angular CLI Server (UG_WebApplication_frontend)">
-    <configuration name="Angular Application (UG_WebApplication_frontend)" type="JavascriptDebugType" uri="http://localhost:4200">
-      <method v="2" />
-    </configuration>
-=======
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;074456182a35870774999111186a3dae&quot;
-  }
-}</component>
   <component name="RunManager">
->>>>>>> Stashed changes
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="L2_Project" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="L2_Project" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Unnamed" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <configuration name="QuestionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ACTIVE_PROFILES" />
-      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../../../Program Files/Java/jdk-18.0.2" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <module name="Server" />
+      <option name="ALTERNATIVE_JRE_PATH" value="18" />
+      <module name="P_Test" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="UG_WebApplication.QuestionApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Angular CLI Server (UG_WebApplication_frontend)" type="js.build_tools.npm">
-      <package-json value="$PROJECT_DIR$/UG_WebApplication_frontend/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="946dec69-5f4f-404f-bebc-ca17d59f073c" name="Changes" comment="" />
-      <created>1679501124282</created>
+      <changelist id="cfaddd92-f9a3-4e7a-a1ad-467ea4302e7f" name="Changes" comment="" />
+      <created>1679509354206</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1679501124282</updated>
-      <workItem from="1679501126697" duration="480000" />
+      <updated>1679509354206</updated>
+      <workItem from="1679509354206" duration="1184000" />
     </task>
     <servers />
   </component>
@@ -283,10 +87,4 @@
       </map>
     </option>
   </component>
-<<<<<<< Updated upstream
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-=======
->>>>>>> Stashed changes
 </project>
