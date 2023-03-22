@@ -8,14 +8,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Server" />
+        <module name="P_Test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="P_Test" target="17" />
       <module name="Server" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="P_Test" options="-parameters" />
       <module name="Server" options="-parameters" />
     </option>
   </component>
