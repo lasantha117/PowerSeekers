@@ -57,6 +57,7 @@ import {
   PreviewVacancyMarksComponent
 } from "./admin/admin-test-control/preview-vacancy-marks/preview-vacancy-marks.component";
 import {AdminLoginComponent} from "./admin/admin-login/admin-login.component";
+import {AdminSignUpComponent} from "./admin/admin-sign-up/admin-sign-up.component";
 
 
 const routes: Routes = [
@@ -232,6 +233,12 @@ const routes: Routes = [
   {
     path:'admin-login',
     component:AdminLoginComponent
+  },
+
+  {
+    path:"admin-sign-up",
+    component:AdminSignUpComponent
+
   }
 
 

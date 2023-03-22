@@ -1,12 +1,12 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Injectable, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {QuestionService} from "../../../question.service";
 
-class question {
-}
-
+@Injectable({
+  providedIn: 'root'
+})
 @Component({
   selector: 'app-first-question',
   templateUrl: './first-question.component.html',
@@ -14,38 +14,18 @@ class question {
 })
 export class FirstQuestionComponent implements OnInit {
 
-  questions: any;
-  answers: any;
-  questionList: any;
-  filteredQuestionList: any;
-
-
-  apiURL = 'http://localhost:8080/questions/random';
-
-
-
-  getRandomQuestionAndAnswers() {
-    return this.http.get('http://localhost:8080/UserQuestion');
-  }
-
-
-
+  userQuestions:any;
 
   ngOnInit() {
-
-    this.http.get('http://localhost:8080/UserQuestion').subscribe(
-      (resp) => {
-        console.log(resp);
-        this.questions = resp;
-        this.answers = resp;
-      },
-
-      (err) => {
-        console.log(err);
-      }
-    )
+    this.http.get('http://localhost:8080/UserQuestion').subscribe((data) => {
+      console.log(data); // You can check the data in the browser console
+      // Assign the data to a variable to display it in the template
+      this.userQuestions = data;
+    });
   }
 
 
-    constructor(private http: HttpClient ) { }
+
+  constructor(private http: HttpClient) { }
+
 }

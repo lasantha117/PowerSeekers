@@ -1,38 +1,7 @@
-<p>second-question works!</p>
+<h1>Random Question</h1>
 
-
-<body>
-<div class="fontcolor">
-  <div class="card mt-5" style="align-items: center">
-    <h1>Answers List</h1>
-  </div>
-
-
-  <div class="mt-5">
-    <div class="scroll">
-      <table class="table table-bordered">
-        <thead class="thead">
-        <tr>
-          <th>Marks ID</th>
-
-          <th>Answer ID</th>
-          <th>Job Title</th>
-          <th>Marks</th>
-
-        </tr>
-        </thead>
-
-        <ul>
-          <li *ngFor="let question of userQuestions">
-            {{ question[0] }} - {{ question[1] }} - {{ question[2] }} - {{ question[3] }}
-          </li>
-        </ul>
-
-      </table>
-    </div>
-
-  </div>
-</div>
-
-<br><br><br><br><br><br><br><br><br>
-</body>
+<ul>
+  <li *ngFor="let question of questions">
+    {{ question.thequestion }}
+  </li>
+</ul>

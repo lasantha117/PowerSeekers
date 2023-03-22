@@ -18,4 +18,9 @@ export class AdminLoginComponent {
 
 
 
+  GoHome(){
+    this.router.navigate(['/home']);
+  }
+
+
 }
