@@ -8,6 +8,13 @@
             "type": "java",
             "name": "QuestionApplication",
             "request": "launch",
+            "mainClass": "UG_WebApplication.question.QuestionApplication",
+            "projectName": "P_Test"
+        },
+        {
+            "type": "java",
+            "name": "QuestionApplication",
+            "request": "launch",
             "mainClass": "UG_WebApplication.QuestionApplication",
             "projectName": "P_Test"
         },
