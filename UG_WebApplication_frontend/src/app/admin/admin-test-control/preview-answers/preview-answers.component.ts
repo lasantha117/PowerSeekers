@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-preview-answers',
@@ -11,7 +12,7 @@ export class PreviewAnswersComponent implements OnInit {
   a_id: any;
   q_id:any;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router:Router) {
   }
 
 
@@ -54,8 +55,6 @@ export class PreviewAnswersComponent implements OnInit {
       }
     );
   }
-
-
 
 
 }

@@ -1,40 +1,23 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-second-question',
   templateUrl: './second-question.component.html',
   styleUrls: ['./second-question.component.css']
 })
-export class SecondQuestionComponent {
+export class SecondQuestionComponent  implements OnInit {
 
-
-  data: any[] = [];
-
+  questions: any;
 
 
 
-  question: any;
-  answer: any;
-  marks: any;
-  jobTitle: any;
-
-  userQuestions:any;
-
-
-  ngOnInit() {
-    this.http.get('http://localhost:8080/UserQuestion').subscribe(
-      (resp) => {
-        console.log(resp);
-        this.userQuestions = resp;
-      },
-
-      (err) => {
-        console.log(err);
-      }
-    )
-
+  ngOnInit(): void {
+    this.http.get('http://localhost:8080/UserQuestion').subscribe(data => {
+      console.log(data);
+    });
   }
 
 
@@ -44,10 +27,13 @@ export class SecondQuestionComponent {
 
 
 
+  constructor(private http: HttpClient, private router:Router) { }
 
-  constructor(private http: HttpClient) { }
 
   }
+
+
+
 
 
 

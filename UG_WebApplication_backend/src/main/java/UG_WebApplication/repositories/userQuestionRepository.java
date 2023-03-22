@@ -34,21 +34,16 @@ public interface userQuestionRepository extends JpaRepository<question, String> 
 
 
 
-    @Query(nativeQuery = true, value ="WITH selected_question AS (\n" +
+    @Query(nativeQuery = true, value ="SELECT q_id, thequestion\n" +
+            "FROM questions\n" +
+            "WHERE q_id NOT IN (\n" +
             "  SELECT q_id\n" +
             "  FROM questions\n" +
-            "  OFFSET floor(random() * (SELECT COUNT(*) FROM questions))\n" +
+            "  ORDER BY random()\n" +
             "  LIMIT 1\n" +
             ")\n" +
-            "SELECT q.thequestion, a.answer, am.marks, am.job_title\n" +
-            "FROM questions q\n" +
-            "JOIN answers a ON q.q_id = a.q_id\n" +
-            "JOIN answersmarks am ON a.a_id = am.a_id AND am.marks = (\n" +
-            "  SELECT MAX(am2.marks)\n" +
-            "  FROM answersmarks am2\n" +
-            "  WHERE am2.a_id = a.a_id\n" +
-            ")\n" +
-            "WHERE q.q_id = (SELECT q_id FROM selected_question);\n"
+            "ORDER BY random()\n" +
+            "LIMIT 1;\n"
 
    )
    List<Object[]> getRandomQuestionforUser();

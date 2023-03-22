@@ -41,6 +41,7 @@ import { ResultsComponent } from './graduate-and-undergraduate/psychometric-test
 import { AddMarksComponent } from './admin/admin-test-control/add-marks/add-marks.component';
 import { PreviewVacancyMarksComponent } from './admin/admin-test-control/preview-vacancy-marks/preview-vacancy-marks.component';
 import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
+import { AdminSignUpComponent } from './admin/admin-sign-up/admin-sign-up.component';
 
 
 
@@ -90,6 +91,7 @@ declarations: [
     AddMarksComponent,
     PreviewVacancyMarksComponent,
     AdminLoginComponent,
+    AdminSignUpComponent,
 
 
   ],

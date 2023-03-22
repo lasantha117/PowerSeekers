@@ -234,6 +234,10 @@ class AdminController {
     public admin registerAdmin(@RequestBody Map<String, String> request) {
         String adminName = request.get("adminName");
         String emailAddress = request.get("emailAddress");
-        return adminService.registerAdmin(adminName, emailAddress);
+        String password = request.get("password");
+        String confirmpassword = request.get("confirmpassword");
+        return adminService.registerAdmin(adminName, emailAddress,password,confirmpassword);
     }
 }
+
+
