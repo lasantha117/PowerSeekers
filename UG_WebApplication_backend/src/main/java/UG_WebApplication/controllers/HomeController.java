@@ -2,6 +2,7 @@ package UG_WebApplication.controllers;
 
 import UG_WebApplication.entity.admin;
 import UG_WebApplication.entity.answers;
+import UG_WebApplication.entity.vacancy;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import UG_WebApplication.entity.answersmarks;
@@ -222,6 +223,26 @@ class answersmarksController{
     }
 }
 
+//---------------------------vacancy---------------------------------------------------------------
+
+@RestController
+class vacancyController {
+
+    @Autowired
+    vacancyService vacancyService;
+
+    @GetMapping("getVacancy")
+    public List<vacancy> getVacancy() {
+        return vacancyService.getVacancy();
+
+    }
+
+    @PostMapping("addVacancy")
+    public vacancy SaveVacancy(@RequestBody vacancy vacancy) {
+        return vacancyService.Savevacancy(vacancy);
+
+    }
+}
 
 //-----------------------------Admin---------------------------------------------------------------
 

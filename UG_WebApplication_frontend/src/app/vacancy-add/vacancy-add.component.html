@@ -5,10 +5,10 @@
   <div class="top">
       <h1>U&G Vacancy</h1>
     </div>
-    <form name="Vacancy_add_form"	method="post">
+      <form >
       <div class="vac_name">
         <label>Vacancy Display Name:</label> <br>
-        <input name="vacancy_name" placeholder="Vacancy display name"  type ="text" size="30" maxlength="50" required> <br>
+        <input name="vacancy_name"  placeholder="Vacancy display name"  type ="text" size="30" maxlength="50" required> <br>
       </div>
 
       <div class="container">
@@ -18,10 +18,7 @@
               <label>Company name:</label> <br>
               <input name="company_name" placeholder="Enter company name"  type ="text" maxlength="30" required>
             </div>
-            <div class="frm-element">
-              <label>Job Designation:</label> <br>
-              <input name="designation" placeholder="Enter job designation"  type ="text" maxlength="30" required>
-            </div>
+
             <div class="frm-element">
               <label>Required Experiences:</label> <br>
               <textarea name="experiences" id="experiences" cols="20" rows="5" required></textarea>
@@ -56,3 +53,20 @@
       </div>
     </form>
 </body>
+
+
+
+
+
+
+<h1>New Vacancy</h1>
+<p>Vacancy ID: {{ vacancy.vacancy_id }}</p>
+<input name="vacancy_name" placeholder="Vacancy display name"  type ="text" size="30" maxlength="50" required> <br>
+<p>Vacancy Name: {{ vacancy.vacancy_name }}</p>
+<p>Experiences: {{ vacancy.experiences }}</p>
+<p>Age: {{ vacancy.age }}</p>
+<p>Description: {{ vacancy.description }}</p>
+
+
+
+
