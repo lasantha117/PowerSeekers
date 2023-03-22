@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "QuestionApplication",
+            "request": "launch",
+            "mainClass": "UG_WebApplication.QuestionApplication",
+            "projectName": "P_Test"
+        },
+        {
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
