@@ -12,8 +12,8 @@ body{
 
   display: flex;
 
-  height: 100vh;
-  margin: -20px 0 50px;
+
+
   font-family: 'Montserrat', sans-serif;
   background-size: cover;
   flex-direction: column;
@@ -84,3 +84,37 @@ body{
 .wrapper .sidebar ul li a.active .icon{
   color: #ee6b6e;
 }
+
+
+/*-----------------------------------*/
+      /*the button */
+    .button {
+      background-color: deepskyblue;
+      border: 2px black;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+
+
+    /*------ error msg---------------------------- */
+
+.error-message {
+  color: red;
+  font-size: 0.8em;
+  margin-top: 0.5em;
+}
+
+/*------ form---------------------------- */
+
+h1{
+  color: white;
+}
+
+.formFont
+{
+  color: #FFFFFF;
+}
+
+

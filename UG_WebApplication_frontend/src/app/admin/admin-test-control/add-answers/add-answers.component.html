@@ -1,0 +1,20 @@
+<div class="formFont">
+  <form (ngSubmit)="AnswerSubmit()">
+    <label>Answer ID:</label>
+
+    <input type="text" [(ngModel)]="a_id" name="a_id" required>
+    <br><br>
+
+    <label>Question ID:</label>
+    <input type="text" [(ngModel)]="q_id" name="question_id" required>
+    <br><br>
+    <label>Answer:</label>
+    <input type="text" [(ngModel)]="answer" name="answer" required>
+    <br><br>
+    <button type="submit" >Submit</button>
+    <button type="reset">Clear</button>
+
+    <br><br> <br>
+  </form>
+</div>
+
