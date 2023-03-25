@@ -193,22 +193,34 @@ class answersmarksController {
 
 
 
-    UserAnswerRepository UserAnswerRepository;
-    @PostMapping("/saveQuestion")
-    public ResponseEntity<?> Save_userAnswers(@RequestBody user_answers user_answers) {
-        try {
-            UserAnswerRepository.save(user_answers);
-            return ResponseEntity.ok().build();
-        } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+
+    @RestController
+    public class UserAnswerController {
+        @Autowired
+        UserAnswerRepository UserAnswerRepository;
+
+
+//        @PostMapping("/saveAnswer")
+//        public ResponseEntity<String> saveUserAnswers(@RequestBody user_answers user_answers) {
+//            UserAnswerRepository.save(user_answers);
+//            return ResponseEntity.ok("Answer saved successfully");
+//        }
+
+
+        @PostMapping("/saveAnswer")
+        public ResponseEntity<?> saveAnswer(@RequestBody user_answers  user_answers ) {
+
+            // save the answer to the database
+            user_answers  saveUserAnswers =  UserAnswerRepository.save(user_answers);
+            return ResponseEntity.ok(user_answers);
         }
+
+
+
+
+
+
     }
-
-
-
-
-
-
 
 
 

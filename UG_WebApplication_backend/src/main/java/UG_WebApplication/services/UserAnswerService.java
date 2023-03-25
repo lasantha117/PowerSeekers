@@ -2,18 +2,21 @@ package UG_WebApplication.services;
 
 import UG_WebApplication.entity.user_answers;
 import org.springframework.beans.factory.annotation.Autowired;
-
+import UG_WebApplication.repositories.*;
 public class UserAnswerService {
 
 
 
     @Autowired
-    UG_WebApplication.repositories.UserAnswerRepository UserAnswerRepository;
+    UserAnswerRepository  UserAnswerRepository;
 
 
 
 
-    public user_answers Save_userAnswers(user_answers user_answers) {
-        return UserAnswerRepository.save(user_answers);
+    public void Save_userAnswers(user_answers user_answers) {
+        UserAnswerRepository.save(user_answers);
     }
+
+
+
 }

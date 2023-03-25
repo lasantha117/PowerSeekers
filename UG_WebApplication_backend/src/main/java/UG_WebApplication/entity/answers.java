@@ -29,6 +29,11 @@ public class answers {
     private question question;
 
 
+    @JsonIgnore
+    @OneToMany
+    @JoinColumn(name = "a_id")
+    private Set<user_answers> user_answers;
+
 
 
     public String getA_id() {
@@ -63,5 +68,11 @@ public class answers {
         this.question = question;
     }
 
+    public Set<UG_WebApplication.entity.user_answers> getUser_answers() {
+        return user_answers;
+    }
 
+    public void setUser_answers(Set<UG_WebApplication.entity.user_answers> user_answers) {
+        this.user_answers = user_answers;
+    }
 }
