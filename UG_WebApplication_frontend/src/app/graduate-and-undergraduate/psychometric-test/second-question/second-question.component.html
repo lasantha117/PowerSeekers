@@ -1,7 +1,18 @@
-<h1>Random Question</h1>
 
-<ul>
-  <li *ngFor="let question of questions">
-    {{ question.thequestion }}
-  </li>
-</ul>
+
+<div *ngIf="question">
+  <h1>{{ question.q_id }}</h1>
+  <h3>{{ question.thequestion }}</h3>
+
+    <div *ngFor="let answers of answers">
+      <label>
+        <input type="radio"  name="answer" [value]="answers.a_id" >
+        {{ answers.answer }}
+      </label>
+
+    </div>
+
+</div>
+
+
+

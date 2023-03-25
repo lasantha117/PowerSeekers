@@ -1,6 +1,5 @@
 package UG_WebApplication.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 

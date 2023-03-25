@@ -3,6 +3,7 @@ package UG_WebApplication.entity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
+import java.util.List;
 import java.util.Set;
 
 
@@ -26,6 +27,8 @@ public class answers {
     @ManyToOne
     @JoinColumn(name = "q_id" ,insertable=false, updatable=false )
     private question question;
+
+
 
 
     public String getA_id() {
@@ -59,4 +62,6 @@ public class answers {
     public void setQuestion(UG_WebApplication.entity.question question) {
         this.question = question;
     }
+
+
 }

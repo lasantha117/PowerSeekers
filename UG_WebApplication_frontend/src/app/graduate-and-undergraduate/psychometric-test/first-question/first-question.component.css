@@ -1,7 +1,9 @@
 body {
   background: url('/assets/img/question_bg.png') no-repeat  center fixed;
 
+
   display: flex;
+
   height: 100vh;
   margin: -20px 0 50px;
   font-family: 'Montserrat', sans-serif;
@@ -17,3 +19,64 @@ body {
 {
   color: #FFFFFF;
 }
+.answers-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.answer {
+  padding: 4rem;
+
+
+}
+
+
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+#NextButton {
+  position: absolute;
+  bottom: 50px;
+  right: 30px;
+  border-radius: 50px;
+  border: 1px solid #000000;
+  background-color: #8d8dff;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+
+}
+

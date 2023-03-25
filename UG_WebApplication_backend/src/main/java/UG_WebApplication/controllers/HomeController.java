@@ -1,15 +1,11 @@
 package UG_WebApplication.controllers;
 
-import UG_WebApplication.entity.admin;
-import UG_WebApplication.entity.answers;
-import UG_WebApplication.entity.vacancy;
+import UG_WebApplication.entity.*;
+import UG_WebApplication.repositories.UserAnswerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import UG_WebApplication.entity.answersmarks;
-import UG_WebApplication.entity.question;
-import UG_WebApplication.repositories.questionRepository;
 import UG_WebApplication.services.*;
-import UG_WebApplication.services.userQuestionService;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.web.bind.annotation.*;
@@ -44,6 +40,9 @@ class questionController{
     final
     questionService questionService;
 
+
+
+
     public questionController(questionService questionService) {
         this.questionService = questionService;
     }
@@ -58,7 +57,7 @@ class questionController{
 
 
     private List<question> askedQuestions = new ArrayList<>();
-    questionRepository questionRepository;
+
 
 
 
@@ -98,16 +97,9 @@ class questionController{
 
 //-------------------question FOR User---------
 
-//    @GetMapping("/random2")
-//    public ResponseEntity<question> getRandomQuestion() {
-//        question randomQuestion = questionService.getRandomQuestion();
-//        return ResponseEntity.ok(randomQuestion);
-//    }
 
 
-
-
-    @GetMapping("getQuestion")
+    @GetMapping("getQuestionForUser")
     public question getQuestion() {
         return questionService.getQuestion();
     }
@@ -116,16 +108,9 @@ class questionController{
 
 
 
-
-//    -----------------------------------------------------------------------
-
 }
 
-
-
-
-
-
+//    -----------------------------------------------------------------------
 
 
 //answers--------------------------------------------------------------------------
@@ -170,7 +155,7 @@ class answerController {
 //-------------------answermarks controller---------
 @CrossOrigin("http://localhost:4200/")
 @RestController
-class answersmarksController{
+class answersmarksController {
 
 
     UG_WebApplication.services.answersmarksService answersmarksService;
@@ -180,10 +165,9 @@ class answersmarksController{
     }
 
     @PostMapping("addAnswersmarks")
-    public answersmarks SaveAnswersmarks(@RequestBody answersmarks answersmarks){
+    public answersmarks SaveAnswersmarks(@RequestBody answersmarks answersmarks) {
         return answersmarksService.createAnswerMark(answersmarks);
     }
-
 
 
     @GetMapping("getAnswersmarks")
@@ -193,71 +177,85 @@ class answersmarksController{
     }
 
 
-
     @DeleteMapping("deleteMarks")
     public void deleteMarks(@RequestParam String marks_id) {
         answersmarksService.deleteMarks(marks_id);
     }
 
 
-
-
-
-
-
-
-
 //------------------------------------------------------------------------------------------------
 
 
-    @RestController
-    class UserQuestionController {
 
-        @Autowired
-        userQuestionService userQuestionService;
 
-        @GetMapping("/UserQuestion")
-        public List<Object[]> getRandomQuestionforUser() {
-            return userQuestionService.getRandomQuestionforUser();
+
+
+
+
+
+    UserAnswerRepository UserAnswerRepository;
+    @PostMapping("/saveQuestion")
+    public ResponseEntity<?> Save_userAnswers(@RequestBody user_answers user_answers) {
+        try {
+            UserAnswerRepository.save(user_answers);
+            return ResponseEntity.ok().build();
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //---------------------------vacancy---------------------------------------------------------------
 
-@RestController
-class vacancyController {
+    @RestController
+    class vacancyController {
 
-    @Autowired
-    vacancyService vacancyService;
+        @Autowired
+        vacancyService vacancyService;
 
-    @GetMapping("getVacancy")
-    public List<vacancy> getVacancy() {
-        return vacancyService.getVacancy();
+        @GetMapping("getVacancy")
+        public List<vacancy> getVacancy() {
+            return vacancyService.getVacancy();
 
+        }
+
+        @PostMapping("addVacancy")
+        public vacancy SaveVacancy(@RequestBody vacancy vacancy) {
+            return vacancyService.Savevacancy(vacancy);
+
+        }
     }
-
-    @PostMapping("addVacancy")
-    public vacancy SaveVacancy(@RequestBody vacancy vacancy) {
-        return vacancyService.Savevacancy(vacancy);
-
-    }
-}
 
 //-----------------------------Admin---------------------------------------------------------------
 
-@RestController
-class AdminController {
-    @Autowired
-    private AdminService adminService;
+    @RestController
+    class AdminController {
+        @Autowired
+        private AdminService adminService;
 
-    @PostMapping("/AdminRegister")
-    public admin registerAdmin(@RequestBody Map<String, String> request) {
-        String adminName = request.get("adminName");
-        String emailAddress = request.get("emailAddress");
-        String password = request.get("password");
-        String confirmpassword = request.get("confirmpassword");
-        return adminService.registerAdmin(adminName, emailAddress,password,confirmpassword);
+        @PostMapping("/AdminRegister")
+        public admin registerAdmin(@RequestBody Map<String, String> request) {
+            String adminName = request.get("adminName");
+            String emailAddress = request.get("emailAddress");
+            String password = request.get("password");
+            String confirmpassword = request.get("confirmpassword");
+            return adminService.registerAdmin(adminName, emailAddress, password, confirmpassword);
+        }
     }
 }
 

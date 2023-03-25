@@ -1,14 +1,10 @@
 package UG_WebApplication.services;
-import UG_WebApplication.entity.answers;
 import UG_WebApplication.entity.question;
 import UG_WebApplication.repositories.questionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.Random;
+import java.util.*;
 
 @Service
 public class questionService {
@@ -17,6 +13,9 @@ public class questionService {
 
     @Autowired
     private UG_WebApplication.repositories.answersRepository answersRepository;
+
+
+
 
 
     public questionService()
@@ -89,11 +88,9 @@ public class questionService {
 
     }
 
+    //---------------------------- new
 
 
-
-
-//---------------------------- new
 
 
 }

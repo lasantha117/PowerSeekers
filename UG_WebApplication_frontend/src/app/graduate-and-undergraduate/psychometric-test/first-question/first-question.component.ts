@@ -14,16 +14,27 @@ import {QuestionService} from "../../../question.service";
 })
 export class FirstQuestionComponent implements OnInit {
 
-  userQuestions:any;
+
+  question: any;
+  answers: any;
+  selectedAnswer: any;
+
+
 
   ngOnInit() {
-    this.http.get('http://localhost:8080/UserQuestion').subscribe((data) => {
-      console.log(data); // You can check the data in the browser console
-      // Assign the data to a variable to display it in the template
-      this.userQuestions = data;
-    });
-  }
+    this.http.get('http://localhost:8080/getQuestionForUser').subscribe((data) => {
+      this.question = data;
 
+
+      this.http.get('http://localhost:8080/getAnswers').subscribe((data) => {
+        if (Array.isArray(data)) {
+          this.answers = data.filter(answer => answer.q_id === this.question.q_id);
+        }
+      });
+    });
+
+
+  }
 
 
   constructor(private http: HttpClient) { }

@@ -1,10 +1,36 @@
-<table>
-  <tr>
-    <th>Question</th>
-    <th>Answer</th>
-  </tr>
-  <tr *ngFor="let userQuestion of userQuestions">
-    <td>{{userQuestion.thequestion}}</td>
 
-  </tr>
-</table>
+<html lang="en" >
+<head>
+  <title> Psychometric-test</title>
+</head>
+
+<body>
+<ul>
+  <li><a href="#Main_Dashboard">Home</a></li>
+  <li><a href="#news">Test</a></li>
+  <li><a href="Vacancy">Vacancy</a></li>
+  <li><a href="#Community">Community</a></li>
+  <li><a href="#Newsfeed">Newsfeed</a></li>
+</ul>
+<div class="fontcolor">
+  <div *ngIf="question">
+    <h1>{{ question.q_id }}</h1>
+    <h3>{{ question.thequestion }}</h3>
+
+    <div class="answers-container">
+      <div *ngFor="let answer of answers" class="answer">
+        <label>
+          <input type="radio" name="answer" [value]="answer.a_id">
+          {{ answer.answer }}
+        </label>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+<br><br><br><br><br><br><br><br>
+<button id="NextButton">Next</button>
+
+
+</body>
