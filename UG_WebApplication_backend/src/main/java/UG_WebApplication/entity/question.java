@@ -38,8 +38,10 @@ public class question {
 
 
 
-    public List<?> getAnswers() {
-        return (List<?>) answers;
+
+
+    public List<UG_WebApplication.entity.answers> getAnswers() {
+        return (List<UG_WebApplication.entity.answers>) answers;
     }
 
 
@@ -82,4 +84,6 @@ public class question {
     public void setDegree(String degree) {
         this.degree = degree;
     }
+
+
 }

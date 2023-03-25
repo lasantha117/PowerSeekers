@@ -10,14 +10,30 @@ import {Observable} from "rxjs";
 })
 export class SecondQuestionComponent  implements OnInit {
 
-  questions: any;
+  question: any;
+  answers: any;
+  selectedAnswer: any;
 
 
 
-  ngOnInit(): void {
-    this.http.get('http://localhost:8080/UserQuestion').subscribe(data => {
-      console.log(data);
+  ngOnInit() {
+    this.http.get('http://localhost:8080/getQuestionForUser').subscribe((data) => {
+      this.question = data;
+
+
+      this.http.get('http://localhost:8080/getAnswers').subscribe((data) => {
+        if (Array.isArray(data)) {
+          this.answers = data.filter(answer => answer.q_id === this.question.q_id);
+        }
+      });
     });
+
+
+  }
+
+
+
+  constructor(private http: HttpClient, private router: Router) {
   }
 
 
@@ -25,16 +41,7 @@ export class SecondQuestionComponent  implements OnInit {
 
 
 
-
-
-  constructor(private http: HttpClient, private router:Router) { }
-
-
-  }
-
-
-
-
+}
 
 
 

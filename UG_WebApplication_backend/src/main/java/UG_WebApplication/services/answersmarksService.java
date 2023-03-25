@@ -34,5 +34,12 @@ public class answersmarksService {
     public void deleteMarks(String marks_id){
         answersmarksRepository.deleteById(marks_id);
     }
+
+
+
+
+
+
+
 }
 
