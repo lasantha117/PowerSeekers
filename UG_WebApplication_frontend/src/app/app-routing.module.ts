@@ -58,6 +58,27 @@ import {
 } from "./admin/admin-test-control/preview-vacancy-marks/preview-vacancy-marks.component";
 import {AdminLoginComponent} from "./admin/admin-login/admin-login.component";
 import {AdminSignUpComponent} from "./admin/admin-sign-up/admin-sign-up.component";
+import {
+  ThirteenthQuestionComponent
+} from "./graduate-and-undergraduate/psychometric-test/thirteenth-question/thirteenth-question.component";
+import {
+  FourteenthQuestionComponent
+} from "./graduate-and-undergraduate/psychometric-test/fourteenth-question/fourteenth-question.component";
+import {
+  FifteenthQuestionComponent
+} from "./graduate-and-undergraduate/psychometric-test/fifteenth-question/fifteenth-question.component";
+import {
+  SixteenthQuestionComponent
+} from "./graduate-and-undergraduate/psychometric-test/sixteenth-question/sixteenth-question.component";
+import {
+  SeventeenthQuestionComponent
+} from "./graduate-and-undergraduate/psychometric-test/seventeenth-question/seventeenth-question.component";
+import {
+  EighteenthQuestionComponent
+} from "./graduate-and-undergraduate/psychometric-test/eighteenth-question/eighteenth-question.component";
+import {
+  TwentiethQuestionComponent
+} from "./graduate-and-undergraduate/psychometric-test/twentieth-question/twentieth-question.component";
 
 
 const routes: Routes = [
@@ -183,31 +204,31 @@ const routes: Routes = [
 
   {
     path:'thirteenth-question',
-    component:ThirdQuestionComponent
+    component:ThirteenthQuestionComponent
   },
 
   {
     path:'fourteenth-question',
-    component:FourthQuestionComponent
+    component:FourteenthQuestionComponent
   },
 
   {
     path:'fifteenth-question',
-      component:FifthQuestionComponent
+      component:FifteenthQuestionComponent
   },
 
   {
     path:'sixteenth-question',
-    component:SixthQuestionComponent
+    component:SixteenthQuestionComponent
   },
   {
     path:'seventeenth-question',
-      component:SeventhQuestionComponent
+      component:SeventeenthQuestionComponent
   },
 
   {
     path:'eighteenth-question',
-    component:EighthQuestionComponent
+    component:EighteenthQuestionComponent
   },
 
   {
@@ -217,7 +238,7 @@ const routes: Routes = [
 
   {
     path:'twentieth-question',
-    component:TwelfthQuestionComponent
+    component:TwentiethQuestionComponent
   },
 
   {

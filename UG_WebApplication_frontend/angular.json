@@ -93,7 +93,8 @@
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "src/assets/JavaScript/Company_Login_JS.js",
-              "src/assets/JavaScript/adminDashboard.js"
+              "src/assets/JavaScript/adminDashboard.js",
+              "src/app/popup_msg.js"
             ]
           }
         }

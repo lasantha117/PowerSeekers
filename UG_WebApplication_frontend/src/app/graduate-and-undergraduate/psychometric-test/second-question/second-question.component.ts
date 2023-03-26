@@ -9,34 +9,61 @@ import {Observable} from "rxjs";
   styleUrls: ['./second-question.component.css']
 })
 export class SecondQuestionComponent  implements OnInit {
-
   question: any;
   answers: any;
-  selectedAnswer: any;
-
-
+  selectedAnswer:any;
+  answerSelected:any = false;
 
   ngOnInit() {
-    this.http.get('http://localhost:8080/getQuestionForUser').subscribe((data) => {
-      this.question = data;
+    this.http.get('http://localhost:8080/getQuestionForUser').subscribe((questionData: any) => {
+      this.question = questionData;
 
-
-      this.http.get('http://localhost:8080/getAnswers').subscribe((data) => {
-        if (Array.isArray(data)) {
-          this.answers = data.filter(answer => answer.q_id === this.question.q_id);
-        }
+      this.http.get('http://localhost:8080/getAnswers').subscribe((answersData: any) => {
+        this.answers = answersData.filter((answer: any) => answer.q_id === this.question.q_id);
       });
+    });
+  }
+
+
+  onSubmit() {
+    const data = {
+
+      a_id: this.selectedAnswer
+    };
+
+    this.http.post('http://localhost:8080/saveAnswer', data).subscribe(() => {
+      // alert('Answer saved successfully!');
     });
 
 
+    this.router.navigate(['third-question']);
+
   }
+
+
+  popupOpen = false;
+
+  openPopup() {
+    this.popupOpen = true;
+    document.body.classList.add('no-scroll');
+  }
+
+  closePopup() {
+    this.popupOpen = false;
+    document.body.classList.remove('no-scroll');
+  }
+
+  goDashboard() {
+    // add your function to navigate to the dashboard here
+  }
+
+
+
 
 
 
   constructor(private http: HttpClient, private router: Router) {
   }
-
-
 
 
 

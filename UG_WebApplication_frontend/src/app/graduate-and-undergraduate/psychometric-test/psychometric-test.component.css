@@ -1,5 +1,5 @@
 body {
-  background: url('/assets/img/test_bg.jpg') no-repeat  center fixed;
+  background: url('/assets/img/test_start_bg.png') no-repeat  center fixed;
 
   display: flex;
   height: 100vh;
@@ -21,7 +21,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+
 }
 
 li {
@@ -32,16 +32,17 @@ li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 56px;
   text-decoration: none;
 }
 
+
 li a:hover:not(.active) {
-  background-color: #111;
+  background-color: #cc57ee;
 }
 
 .active {
-  background-color: #04AA6D;
+  background-color: #6464dc;
 }
 
 
@@ -61,6 +62,7 @@ button {
 
 button:active {
   transform: scale(0.95);
+
 }
 
 button:focus {
@@ -69,7 +71,7 @@ button:focus {
 
 button.ghost {
   background-color: transparent;
-  border-color: #FFFFFF;
+  border-color: #6464dc;
 }
 
 

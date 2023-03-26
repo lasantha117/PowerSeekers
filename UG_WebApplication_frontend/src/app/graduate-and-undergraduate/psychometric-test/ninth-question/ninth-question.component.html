@@ -1,1 +1,58 @@
-<p>ninth-question works!</p>
+
+<html lang="en" >
+<head>
+  <title> Psychometric-test</title>
+</head>
+
+<body>
+
+
+<ul>
+  <li><a href="#Main_Dashboard">Home</a></li>
+  <li><a href="#news" class="active">Psychometric Test</a></li>
+  <li><a href="Vacancy">Vacancy</a></li>
+  <li><a href="#Community">Community</a></li>
+  <li><a href="#Newsfeed">Newsfeed</a></li>
+</ul>
+<br><br><br>
+
+
+<div class="fontcolor">
+  <div *ngIf="question">
+    <h2>{{ question.thequestion }}</h2>
+    <form>
+
+      <div *ngFor="let answer of answers">
+        <input type="radio" name="answer" [value]="answer.a_id" id="{{ 'answer-' + answer.a_id }} " [(ngModel)]="answerSelected" (change)="selectedAnswer = answer.a_id">
+        <label for="{{ 'answer-' + answer.a_id }}">{{ answer.answer }}</label>
+      </div>
+      <button type="submit" class="NextButton" (click)="onSubmit()" [disabled]="!answerSelected" [ngClass]="{'disabled': !answerSelected}">Next Question</button>
+
+
+
+      <div class="container">
+        <button type="button" class="btn" (click)="openPopup()">Quit</button>
+        <div class="popup" [ngClass]="{'open-popup': popupOpen}">
+          <img src="/assets/img/quite_test.png"  alt="popup image">
+          <h2>Quite....???</h2>
+          <p>You Can Attempt The Test Again Later</p>
+          <button type="button" (click)="goDashboard()">Yes</button>
+          <button type="button" (click)="closePopup()">No</button>
+        </div>
+      </div>
+      <div class="overlay" [ngClass]="{'overlay-active': popupOpen}"></div>
+
+    </form>
+  </div>
+</div>
+
+
+
+
+<div class="num">
+  <img src="/assets/img/q9.png" width="100" alt="Number_1_Image" />
+</div>
+
+
+
+</body>

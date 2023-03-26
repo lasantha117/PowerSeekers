@@ -7,30 +7,26 @@ import jakarta.persistence.*;
 public class user_answers {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long UA_id;
 
-    @Column(name = "q_id")
-    private String q_id;
 
+    @ManyToOne
+    @JoinColumn(name = "a_id" ,insertable=false, updatable=false )
+    private answers answers;
     @Column(name = "a_id")
     private String a_id;
 
 
     public Long getId() {
-        return id;
+        return UA_id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setId(Long UA_id) {
+        this.UA_id = UA_id;
     }
 
-    public String getQ_id() {
-        return q_id;
-    }
 
-    public void setQ_id(String q_id) {
-        this.q_id = q_id;
-    }
+
 
     public String getA_id() {
         return a_id;
@@ -38,5 +34,14 @@ public class user_answers {
 
     public void setA_id(String a_id) {
         this.a_id = a_id;
+    }
+
+
+    public UG_WebApplication.entity.answers getAnswers() {
+        return answers;
+    }
+
+    public void setAnswers(UG_WebApplication.entity.answers answers) {
+        this.answers = answers;
     }
 }

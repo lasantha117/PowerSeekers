@@ -16,12 +16,6 @@ public class questionService {
 
 
 
-
-
-    public questionService()
-    {
-
-    }
    public List<question> getQuestionAdmin()
     {
        return questionRepository.findAll();
