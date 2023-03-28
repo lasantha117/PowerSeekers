@@ -1,0 +1,104 @@
+body {
+  background: url('/assets/img/test_start_bg.png') no-repeat  center fixed;
+
+  display: flex;
+  height: 100vh;
+  margin: -20px 0 50px;
+  font-family: 'Montserrat', sans-serif;
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+
+
+
+/*-------------------- Menu----------------*/
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 56px;
+  text-decoration: none;
+}
+
+
+li a:hover:not(.active) {
+  background-color: #cc57ee;
+}
+
+.active {
+  background-color: #6464dc;
+}
+
+
+/*---------------------- button -----------------------*/
+button {
+  border-radius: 20px;
+  border: 1px solid black;
+  background-color: midnightblue;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+}
+
+button:active {
+  transform: scale(0.95);
+
+}
+
+button:focus {
+  outline: none;
+}
+
+button.ghost {
+  background-color: transparent;
+  border-color: #6464dc;
+}
+
+
+
+
+
+.bottom {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.fontcolor
+{
+  color: snow;
+}
+
+
+.ptimg{
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content:center;
+  width: 5%;
+  height:25%;
+
+}
+
