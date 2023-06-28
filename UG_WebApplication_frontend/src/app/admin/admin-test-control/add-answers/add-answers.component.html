@@ -1,20 +1,28 @@
 <div class="formFont">
-  <form (ngSubmit)="AnswerSubmit()">
-    <label>Answer ID:</label>
-
-    <input type="text" [(ngModel)]="a_id" name="a_id" required>
-    <br><br>
-
-    <label>Question ID:</label>
-    <input type="text" [(ngModel)]="q_id" name="question_id" required>
-    <br><br>
-    <label>Answer:</label>
-    <input type="text" [(ngModel)]="answer" name="answer" required>
-    <br><br>
-    <button type="submit" >Submit</button>
-    <button type="reset">Clear</button>
-
-    <br><br> <br>
-  </form>
+  <div class="container" id="container">
+    <div class="form-container sign-in-container">
+      <form #form="ngForm" (ngSubmit)="AnswerSubmit()" action="#">
+        <div class="fontcolor">
+          <br><br>
+          <label>Question ID:</label>
+          <input type="text" [(ngModel)]="q_id" name="question_id" required>
+          <div *ngIf="formSubmitted && !q_id" class="error-message">
+            The Question ID is required
+          </div>
+          <br><br> <br><br>
+          <label>Answer:</label>
+          <input type="text" [(ngModel)]="answer" name="answer" required>
+          <div *ngIf="formSubmitted && !answer" class="error-message">
+            The Answer is required
+          </div>
+          <br><br> <br><br>
+          <button type="submit" class="submitButton">Submit</button>
+          <button type="reset" class="clearbutton">Clear</button>
+          <br><br> <br>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
 
+<br><br> <br>

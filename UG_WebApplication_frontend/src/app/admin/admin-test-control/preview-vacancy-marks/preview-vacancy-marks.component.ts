@@ -15,7 +15,7 @@ export class PreviewVacancyMarksComponent {
 
   ngOnInit() {
 
-    this.http.get('http://localhost:8080/getAnswersmarks').subscribe(
+    this.http.get('http://localhost:8080/api/v1/auth/getAnswersmarks').subscribe(
       (resp) => {
         console.log(resp);
         this.marks = resp;

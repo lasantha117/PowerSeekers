@@ -14,13 +14,12 @@
 <div class="wrapper">
   <!--Top menu -->
   <div class="sidebar">
-
+    <br><br><br>
     <!--profile image & text-->
     <div class="profile">
-      <h3>Alan Roy</h3>
-      <p>Admin 01</p>
-    </div>
+      <h3>{{ email | async }}</h3>
 
+    </div>
 
     <!--menu item-->
     <ul>
@@ -31,20 +30,20 @@
       </li>
       <li>
         <a href="#">
-          <span class="icon"><i class="fas fa-desktop"></i></span>
+
           <span class="item">Profile Issue</span>
         </a>
       </li>
       <li>
         <a routerLink="/admin-test-control">
 
-          <span class="icon"><i class="fas fa-user-friends"></i></span>
+
           <span class="item">Test Control</span>
         </a>
       </li>
       <li>
         <a href="#">
-          <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+
           <span class="item">Newsfeed Control</span>
         </a>
       </li>
@@ -56,7 +55,7 @@
       </li>
       <li>
         <a href="#">
-          <span class="icon"><i class="fas fa-chart-line"></i></span>
+
           <span class="item">Company Activity</span>
         </a>
       </li>
@@ -64,15 +63,15 @@
 
         <br><br><br><br><br><br><br><br><br><br>
 
-        <a href="#">
-          <span class="icon"><i class="fas fa-cog"></i></span>
-          <span class="item">Settings</span>
+        <a >
+
+          <span class="item" (click)="settings()">Settings</span>
         </a>
       </li>
       <li>
-        <a href="#">
-          <span class="icon"><i class="fas fa-cog"></i></span>
-          <span class="item">SignOut</span>
+        <a>
+
+          <span class="item" (click)="logout()">Logout</span>
         </a>
       </li>
     </ul>
@@ -82,35 +81,49 @@
 
 <div class="responsive-image">
 <div class="centerImg">
-  <img src="/UG_WebApplication_frontend/src/assets/img/admin_profile_issue.png" width="250" height="250" alt="image">
+  <img src="assets/img/admin_profile_issue.png" width="250" height="250" alt="image">
 
 </div>
 
 <div class="bottomleft">
-  <img src="/UG_WebApplication_frontend/src/assets/img/admin_test_control.png" width="250" height="250" alt="image">
+  <img src="assets/img/admin_test_control.png" width="250" height="250" alt="image">
 
 </div>
 
 <div class="bottomright">
 
-  <img src="/UG_WebApplication_frontend/src/assets/img/admin_newsfeed_control.png" width="250" height="250" alt="image" >
+  <img src="assets/img/admin_newsfeed_control.png" width="250" height="250" alt="image" >
 
 </div>
 
 <div class="topleft">
 
-  <img src="/UG_WebApplication_frontend/src/assets/img/admin_comunity_control.png" width="250" height="250" alt="image">
+  <img src="assets/img/admin_comunity_control.png" width="250" height="250" alt="image">
 
 
 </div>
 
 <div class="topright">
 
-  <img src="/UG_WebApplication_frontend/src/assets/img/admin_company.png" width="250" height="250" alt="image">
+  <img src="assets/img/admin_company.png" width="250" height="250" alt="image">
 
 
 </div>
 
 </div>
+
+<div class="card">
+  <div class="card-header">
+    Last Login
+  </div>
+  <div class="card-body">
+    <p>{{ lastLogin }}</p>
+  </div>
+</div>
+
+<div class="fontcolor">
+  <a (click)="v2()" style="cursor: pointer">V.2</a>
+</div>
+
 </body>
 

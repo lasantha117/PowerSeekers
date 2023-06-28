@@ -1,0 +1,54 @@
+<body>
+
+<div *ngIf="isLoading">
+  <!-- Show loading symbol here -->
+  <div *ngIf="isLoading" class="loading-container">
+    <!-- Show loading symbol here -->
+    <img src="assets/gif/logo.gif" [style.width.px]="400" [style.height.px]="400" />
+  </div>
+</div>
+<div *ngIf="!isLoading">
+
+<br><br><br>
+<div class="FontColor">
+
+
+
+<h1>Psychometric Test Information and Career Path Recommendations</h1>
+  <br>
+<p>Welcome to our psychometric test! This test will help you discover suitable career paths based on your responses.</p>
+  <br>
+<p>Please answer all 20 questions honestly and to the best of your abilities. Your privacy is important to us, and your personal information will be protected.</p>
+  <br>
+<p>Upon completing the test, you will receive the three most suitable career path recommendations from the following options:</p>
+
+<ul>
+  <li>Software Developer</li>
+  <li>Technical Support Engineer</li>
+  <li>Quality Assurance Analyst</li>
+  <li>Network Administrator</li>
+  <li>Front-End Web Developer</li>
+  <li>UX Designer</li>
+  <li>Mobile Application Developer</li>
+  <li>Game Developer</li>
+  <li>Game Designer</li>
+  <li>Graphic Designer</li>
+  <li>Web Designer</li>
+</ul>
+
+
+
+<br><br><br>
+  <div class="bottom">
+    <button (click)="GoFirst()" class="ghost">Start</button>
+    <div class="red">
+ <i>"While the psychometric test, you can't quite or go back."</i>
+    </div>
+
+    <p> <i> Please note that the recommendations are not always right, and they are just recommendations.</i> </p>
+  </div>
+  <button (click)="GoBack()" class="button_2" ><span>Back</span></button>
+</div>
+</div>
+</body>
+

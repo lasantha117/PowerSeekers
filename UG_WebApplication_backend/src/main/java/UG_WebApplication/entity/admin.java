@@ -1,66 +1,118 @@
 package UG_WebApplication.entity;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.*;
 
+import jakarta.persistence.*;
+import lombok.*;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
+
+
+
+@AllArgsConstructor
+@Builder
+@Data
+@Getter
+@Setter
 @Entity
 @Table(name = "admin")
-public class admin {
+public class admin implements UserDetails {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long admin_id;
-
-    @Column(name = "adminName")
-    private String adminName;
+    private Integer user_id;
 
 
-    @Column(name = "password")
+    private String name;
+
+
+
     private String password;
 
     @Column(unique = true)
-    private String emailAddress;
+    private String email;
 
 
-    @Column(name = "confirmPassword")
-    private String confirmPassword;
 
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
-    public Long getAdmin_id() {
-        return admin_id;
+    public admin() {
+
     }
 
-    public void setAdmin_id(Long admin_id) {
-        this.admin_id = admin_id;
+
+    public Integer getUser_id() {
+        return user_id;
     }
 
-    public String getAdminName() {
-        return adminName;
+    public void setUser_id(Integer user_id) {
+        this.user_id = user_id;
     }
 
-    public void setAdminName(String adminName) {
-        this.adminName = adminName;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return null;
     }
 
     public String getPassword() {
         return password;
     }
 
+    @Override
+    public String getUsername() {
+        return null;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return false;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return false;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return false;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return false;
+    }
+
     public void setPassword(String password) {
         this.password = password;
     }
 
-    public String getEmailAddress() {
-        return emailAddress;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEmailAddress(String emailAddress) {
-        this.emailAddress = emailAddress;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getConfirmPassword() {
-        return confirmPassword;
+    public Role getRole() {
+        return role;
     }
 
-    public void setConfirmPassword(String confirmPassword) {
-        this.confirmPassword = confirmPassword;
+    public void setRole(Role role) {
+        this.role = role;
     }
 }

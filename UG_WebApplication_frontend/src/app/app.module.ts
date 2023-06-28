@@ -12,7 +12,7 @@ import { IndexComponent } from './index/index.component';
 import { PsychometricTestComponent } from './graduate-and-undergraduate/psychometric-test/psychometric-test.component';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { AdminTestControlComponent } from './admin/admin-test-control/admin-test-control.component';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from "@angular/common/http";
 import { AddAnswersComponent } from './admin/admin-test-control/add-answers/add-answers.component';
 import { PreviewQuestionComponent } from './admin/admin-test-control/preview-question/preview-question.component';
@@ -42,6 +42,15 @@ import { AddMarksComponent } from './admin/admin-test-control/add-marks/add-mark
 import { PreviewVacancyMarksComponent } from './admin/admin-test-control/preview-vacancy-marks/preview-vacancy-marks.component';
 import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
 import { AdminSignUpComponent } from './admin/admin-sign-up/admin-sign-up.component';
+import { AddQuestionsComponent } from './admin/add-questions/add-questions.component';
+import { NewMarksComponent } from './admin/new-marks/new-marks.component';
+import { StudentSignupComponent } from './graduate-and-undergraduate/student-signup/student-signup.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSnackBarModule} from "@angular/material/snack-bar";
+import { DialogComponent } from './dialog/dialog.component';
+import { RulesComponent } from './graduate-and-undergraduate/psychometric-test/rules/rules.component';
+import { ForgotPasswordComponent } from './admin/admin-login/forgot-password/forgot-password.component';
+import { SettingsComponent } from './admin/settings/settings.component';
 
 
 
@@ -92,17 +101,27 @@ declarations: [
     PreviewVacancyMarksComponent,
     AdminLoginComponent,
     AdminSignUpComponent,
+    AddQuestionsComponent,
+    NewMarksComponent,
+    StudentSignupComponent,
+    DialogComponent,
+    RulesComponent,
+    ForgotPasswordComponent,
+    SettingsComponent,
+
 
 
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserModule,
-    FormsModule,
-    HttpClientModule,
+    imports: [
+        AppRoutingModule,
+        BrowserModule,
+        FormsModule,
+        HttpClientModule,
+        ReactiveFormsModule,
+        BrowserAnimationsModule,
+        MatSnackBarModule,
 
-  ],
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

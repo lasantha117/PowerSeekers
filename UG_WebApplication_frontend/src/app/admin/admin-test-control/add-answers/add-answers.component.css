@@ -1,29 +1,293 @@
+/* Import the font */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 
-h1{
-  color: white;
+body{
+
+  justify-content: center;
+
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+.snackbar-container {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
 }
 
 
-/*the button */
-.button {
-  background-color: deepskyblue;
-  border: 2px black;
+
+
+
+
+
+
+
+/* Apply styles to h1 */
+h1 {
   color: white;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 5px;
 }
 
+/* Apply styles to the button */
 
-.formFont
-{
+/* Apply styles to elements with the class "formFont" */
+.formFont {
   color: #FFFFFF;
 }
 
-
+/* Apply styles to elements with the class "error-message" */
 .error-message {
   color: red;
   font-size: 0.8em;
   margin-top: 0.5em;
 }
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #050801;
+  font-family: 'Raleway', sans-serif;
+}
+
+
+/*submit button css*/
+.submitButton,.clearbutton{
+  padding: 15px 20px;
+  background-color: #76ff81;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 4px;
+  overflow: hidden;
+  transition: 0.5s;
+  cursor: pointer;
+  margin-right: 10px;
+
+}
+
+.submitButton:hover{
+  background: #76ff81;
+  color: #efeaea;
+  box-shadow: 0 0 5px #10a116,
+  0 0 25px #10a116,
+  0 0 50px #76ff81,
+  0 0 200px #ffffff;
+  -webkit-box-reflect:below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.33));
+}
+
+
+
+
+/*clear button css*/
+.clearbutton{
+  position:center;
+  background-color: #b02a2a;
+  color: #ffffff;
+
+}
+
+.clearbutton:hover{
+  background: #ff3333;
+  color: #efeaea;
+  box-shadow: 0 0 5px #ff3333,
+  0 0 25px #ff3333,
+  0 0 50px #ff3333,
+  0 0 200px #ffffff;
+  -webkit-box-reflect:below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.33));
+}
+
+
+
+.clearbutton:active,.submitButton:active {
+  box-shadow: 0px 3px 0px #888;
+  transform: translateY(8px);
+  transition: all 0.5s;
+}
+
+
+
+/*delete button css*/
+
+.DeleteButton{
+
+  background-color: #b02a2a;
+  color: #ffffff;
+
+}
+
+.DeleteButton:hover{
+  background: #ff3333;
+  color: #efeaea;
+  box-shadow: 0 0 5px #ff3333,
+  0 0 25px #ff3333,
+  0 0 50px #ff3333,
+  0 0 200px #ffffff;
+  -webkit-box-reflect:below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.33));
+}
+
+
+
+.DeleteButton:active,.submitButton:active {
+  box-shadow: 0px 3px 0px #888;
+  transform: translateY(8px);
+  transition: all 0.5s;
+}
+
+
+
+
+/* Preview Button*/
+
+.PreviewButton {
+  border-radius: 25px;
+  background-color: #1c1f23;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 11px;
+  padding: 13px;
+  width: 175px;
+  transition: all 1s;
+  cursor:pointer;
+  margin: 1px;
+}
+
+.PreviewButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.PreviewButton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -80px;
+  transition: 1s;
+}
+
+.PreviewButton:hover span {
+  padding-right: 25px;
+}
+
+.PreviewButton:hover span:after {
+  opacity: 6;
+  right: 0;
+}
+
+.PreviewButton:hover {
+  background-color: #cc57ee
+}
+
+.PreviewButton:active {
+  background-color: #e8e8e8;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+
+/*form styles*/
+
+
+form {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  text-align: center;
+  background: transparent;
+
+}
+
+input {
+  background-color: #e8e8e8;
+  border: none;
+  padding: 3px 7px;
+  margin: 5px 30px;
+  width: 50%;
+}
+
+.container {
+  background: transparent;
+  border-radius: 100px;
+  box-shadow: 0 14px 28px rgb(16, 0, 0),
+  0 10px 10px rgba(255, 255, 255, 0.22);
+  position: relative;
+  overflow: hidden;
+  width: 768px;
+  max-width: 100%;
+  min-height: 400px;
+}
+
+
+.error-message {
+  color: #ff1313;
+  font-size: 0.8em;
+  margin-top: 0.5em;
+}
+
+/* Other CSS rules remain the same */

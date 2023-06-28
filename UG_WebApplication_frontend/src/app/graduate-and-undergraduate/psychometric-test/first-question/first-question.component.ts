@@ -1,9 +1,6 @@
-import {Component, Injectable, OnInit} from '@angular/core';
-import {Router} from "@angular/router";
-import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
-import {QuestionService} from "../../../question.service";
-
+import { Component, Injectable, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
@@ -14,19 +11,23 @@ import {QuestionService} from "../../../question.service";
   styleUrls: ['./first-question.component.css']
 })
 export class FirstQuestionComponent implements OnInit {
-
-
   question: any;
   answers: any;
-  selectedAnswer:any;
-  answerSelected:any = false;
+  selectedAnswer: any;
+  answerSelected: any = false;
+  isLoading: boolean = true;
+
 
   ngOnInit() {
-    this.http.get('http://localhost:8080/getQuestionForUser').subscribe((questionData: any) => {
+    this.isLoading = true; // Set isLoading to true before making API requests
+
+    this.http.get('http://localhost:8080/api/v1/auth/getQuestionForUser').subscribe((questionData: any) => {
       this.question = questionData;
 
-      this.http.get('http://localhost:8080/getAnswers').subscribe((answersData: any) => {
+      this.http.get('http://localhost:8080/api/v1/auth/getAnswers').subscribe((answersData: any) => {
         this.answers = answersData.filter((answer: any) => answer.q_id === this.question.q_id);
+
+        this.isLoading = false; // Set isLoading to false when responses are received
       });
     });
   }
@@ -34,41 +35,23 @@ export class FirstQuestionComponent implements OnInit {
 
   onSubmit() {
     const data = {
-
-      a_id: this.selectedAnswer
+      a_id: this.selectedAnswer,
+      email: localStorage.getItem('email') // Get the stored email from local storage
     };
 
-    this.http.post('http://localhost:8080/saveAnswer', data).subscribe(() => {
+    this.http.post('http://localhost:8080/api/v1/auth/saveAnswer', data).subscribe(() => {
       // alert('Answer saved successfully!');
     });
 
-
-      this.router.navigate(['/second-question']);
-
+    this.router.navigate(['/second-question']);
   }
 
 
   popupOpen = false;
 
-  openPopup() {
-    this.popupOpen = true;
-    document.body.classList.add('no-scroll');
+  constructor(private router: Router, private http: HttpClient) {}
+
+  calculateAndSaveMarks() {
+    return this.http.post("http://localhost:8080/api/v1/auth/calculate-marks", null);
   }
-
-  closePopup() {
-    this.popupOpen = false;
-    document.body.classList.remove('no-scroll');
-  }
-
-  goDashboard() {
-    // add your function to navigate to the dashboard here
-  }
-
-
-
-
-  constructor(private router: Router,private http: HttpClient) {
-  }
-
-
 }

@@ -24,7 +24,8 @@ align-items: center;
 
 
 .wrapper .sidebar{
-  background: black;
+  background: transparent;
+  box-shadow: 0 14px 28px rgb(0, 0, 0);
   position: fixed;
   top: 0;
   left: 0;
@@ -45,6 +46,7 @@ align-items: center;
 .wrapper .sidebar .profile h3{
   color: deepskyblue;
   margin: 10px 0 5px;
+
 }
 
 /*admin index*/
@@ -57,10 +59,11 @@ align-items: center;
 .wrapper .sidebar ul li a{
   display: block;
   padding: 13px 30px;
-  border-bottom: 3px solid deepskyblue;
+
   color: rgb(241, 237, 237);
   font-size: 16px;
   position: relative;
+  background: transparent;
 }
 
 
@@ -164,7 +167,16 @@ align-items: center;
   }
 }
 
+.card {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #FFFFFF;
+}
 
 
+.fontcolor{
+  color: #FFFFFF;
 
+}
 

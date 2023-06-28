@@ -1,14 +1,24 @@
 
-<html lang="en" >
+>
 <head>
 <title> Psychometric-test</title>
 </head>
 
 <body>
+
+<div *ngIf="isLoading">
+  <!-- Show loading symbol here -->
+  <div *ngIf="isLoading" class="loading-container">
+    <!-- Show loading symbol here -->
+    <img src="assets/gif/logo.gif" [style.width.px]="400" [style.height.px]="400" />
+  </div>
+</div>
+
+
+
 <br><br><br>
 <ul>
   <li><a href="#Main_Dashboard">Home</a></li>
-
   <li><a href="#news" class="active">Psychometric Test</a></li>
   <li><a href="Vacancy">Vacancy</a></li>
   <li><a href="#Community">Community</a></li>
@@ -16,23 +26,16 @@
 </ul>
 
 <div class="ptimg">
-  <img src="/assets/img/Psychometric-test.png" >
-
+  <img src="/assets/img/Psychometric-test.png" alt="Psychometric Test Image">
 </div>
 
 <div class="bottom">
-
-<button (click)="GoFirst()" class="ghost"> Start</button>
-
-
+  <button (click)="GoFirst()" class="ghost">Let's Go</button>
 </div>
-
-
 
 
 
 </body>
-</html>
 
 
 

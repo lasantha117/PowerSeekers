@@ -4,7 +4,7 @@
   color: #FFFFFF;
 }
 div.scroll {
-  border: 3px solid black;
+  border: 10px solid #492c45;
   height: 700px;
   width: 700px;
   overflow-x: scroll;
@@ -29,3 +29,94 @@ body{
 
 
 }
+
+
+/*delete button css*/
+
+.DeleteButton{
+
+  background-color: #b02a2a;
+  color: #ffffff;
+
+}
+
+.DeleteButton:hover{
+  background: #ff3333;
+  color: #efeaea;
+  box-shadow: 0 0 5px #ff3333,
+  0 0 25px #ff3333,
+  0 0 50px #ff3333,
+  0 0 200px #ffffff;
+  -webkit-box-reflect:below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.33));
+}
+
+
+
+.DeleteButton:active,.submitButton:active {
+  box-shadow: 0px 3px 0px #888;
+  transform: translateY(8px);
+  transition: all 0.5s;
+}
+
+
+
+
+/*Update button css*/
+
+.UpdateButton{
+
+  background-color: #ffdf37;
+  color: #000000;
+
+}
+
+.UpdateButton:hover{
+  background: #f8ff33;
+  color: #efeaea;
+  box-shadow: 0 0 5px #ffef56,
+  0 0 25px #e4ff33,
+  0 0 50px #fff533,
+  0 0 200px #ffffff;
+  -webkit-box-reflect:below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.33));
+}
+
+
+
+.UpdateButton:active,.submitButton:active {
+  box-shadow: 0px 3px 0px #888;
+  transform: translateY(8px);
+  transition: all 0.5s;
+}
+
+
+
+.SaveButton{
+
+  background-color: #029308;
+  color: #000000;
+
+}
+
+
+
+
+.SaveButton:hover{
+  background: #76ff81;
+  color: #efeaea;
+  box-shadow: 0 0 5px #10a116,
+  0 0 25px #76ff81,
+  0 0 50px #76ff81,
+  0 0 200px #ffffff;
+  -webkit-box-reflect:below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.33));
+}
+
+
+
+.SaveButton:active,.submitButton:active {
+  box-shadow: 0px 3px 0px #8d8dff;
+  transform: translateY(8px);
+  transition: all 0.5s;
+}
+
+
+

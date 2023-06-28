@@ -12,12 +12,13 @@ import java.util.Set;
 public class answers {
 
     @Id
-    @Column(name = "a_id" )
-    private String a_id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "a_id",insertable=false, updatable=false)
+    private Long a_id;
+
 
     @Column(name = "q_id")
     private String q_id;
-
 
 
     @Column(name = "answer")
@@ -28,19 +29,16 @@ public class answers {
     @JoinColumn(name = "q_id" ,insertable=false, updatable=false )
     private question question;
 
-
     @JsonIgnore
-    @OneToMany
-    @JoinColumn(name = "a_id")
-    private Set<user_answers> user_answers;
+    @OneToMany(mappedBy = "a_id")
+    private List<answersmarks> answerMarks;
 
 
-
-    public String getA_id() {
+    public Long getA_id() {
         return a_id;
     }
 
-    public void setA_id(String a_id) {
+    public void setA_id(Long a_id) {
         this.a_id = a_id;
     }
 
@@ -68,11 +66,17 @@ public class answers {
         this.question = question;
     }
 
-    public Set<UG_WebApplication.entity.user_answers> getUser_answers() {
-        return user_answers;
+
+    public List<answersmarks> getAnswerMarks() {
+        return answerMarks;
     }
 
-    public void setUser_answers(Set<UG_WebApplication.entity.user_answers> user_answers) {
-        this.user_answers = user_answers;
+    public void setAnswerMarks(List<answersmarks> answerMarks) {
+        this.answerMarks = answerMarks;
     }
+
+
+
 }
+
+

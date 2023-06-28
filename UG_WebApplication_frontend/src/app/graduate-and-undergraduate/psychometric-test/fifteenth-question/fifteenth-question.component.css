@@ -1,10 +1,6 @@
 body {
-  background: url('/assets/img/question_bg.png') no-repeat  center fixed;
-
-
+  background: url('/assets/img/qe.jpg') no-repeat  center fixed;
   display: flex;
-
-
   margin: -20px 0 50px;
   background-size: cover;
   flex-direction: column;
