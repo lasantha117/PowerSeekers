@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpParams} from "@angular/common/http";
 
 @Component({
   selector: 'app-twentieth-question',
@@ -13,12 +13,23 @@ export class TwentiethQuestionComponent implements OnInit {
   selectedAnswer:any;
   answerSelected:any = false;
 
+  isButtonDisabled = false;
+  jobTitles: string[] = [];
+  email: any;
+  isLoading: boolean = true;
+
+
+
   ngOnInit() {
-    this.http.get('http://localhost:8080/getQuestionForUser').subscribe((questionData: any) => {
+    this.isLoading = true; // Set isLoading to true before making API requests
+
+    this.http.get('http://localhost:8080/api/v1/auth/getQuestionForUser').subscribe((questionData: any) => {
       this.question = questionData;
 
-      this.http.get('http://localhost:8080/getAnswers').subscribe((answersData: any) => {
+      this.http.get('http://localhost:8080/api/v1/auth/getAnswers').subscribe((answersData: any) => {
         this.answers = answersData.filter((answer: any) => answer.q_id === this.question.q_id);
+
+        this.isLoading = false; // Set isLoading to false when responses are received
       });
     });
   }
@@ -26,15 +37,19 @@ export class TwentiethQuestionComponent implements OnInit {
 
   onSubmit() {
     const data = {
-
-      a_id: this.selectedAnswer
+      a_id: this.selectedAnswer,
+      email: localStorage.getItem('email') // Get the stored email from local storage
     };
-
-    this.http.post('http://localhost:8080/saveAnswer', data).subscribe(() => {
+    this.http.post('http://localhost:8080/api/v1/auth/saveAnswer', data).subscribe(() => {
       // alert('Answer saved successfully!');
     });
 
-    this.router.navigate(['/results']);
+
+
+  }
+
+  results(){
+
 
   }
 
@@ -56,13 +71,35 @@ export class TwentiethQuestionComponent implements OnInit {
   }
 
 
+  calculateTotalMarks(): void {
 
 
+    const apiUrl = 'http://localhost:8080/api/v1/auth/total-marks';
+
+    // Create an HttpParams object and set the 'email' parameter
+    const params = new HttpParams().set('email', this.email);
+
+    // Pass the 'params' object as the second argument in the request
+    this.http.post(apiUrl, null, { params }).subscribe(
+      response => {
+        console.log('Total marks calculated and saved successfully.');
+      },
+      error => {
+        console.log('Error occurred during the calculation and saving of total marks:', error);
+      }
+    );
+    this.isButtonDisabled = true;
+    this.router.navigate(['/results']);
 
 
-
-  constructor(private router: Router,private http: HttpClient) {
   }
 
+
+
+
+
+  constructor(private router:Router,private http: HttpClient) {
+    this.email = localStorage.getItem('email');
+  }
 
 }

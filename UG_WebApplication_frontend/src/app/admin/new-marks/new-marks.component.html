@@ -1,0 +1,299 @@
+<body>
+<div class="container" id="container">
+  <div class="form-container sign-in-container">
+    <form  #form="ngForm" (ngSubmit)="AnswerMarksubmit()"  action="#">
+
+      <div class="fontcolor">
+        <br><br>
+
+
+
+
+        <label>Answer ID:</label>
+        <input type="text" [(ngModel)]="a_id" name="a_id" required>
+        <div *ngIf="form.submitted && form.controls['a_id'].invalid" class="error-message">
+          Answer ID is required
+        </div>
+        <br><br><br>
+
+
+        <label>Job Title:</label>
+        <select [(ngModel)]="job_title" name="job_title1" required>
+          <option value="" disabled selected>Select a job title</option>
+          <option value="Software Developer">Software Developer</option>
+        </select>
+        <div *ngIf="form.submitted && form.controls['job_title'].invalid" class="error-message">
+          Job Title is required
+        </div>
+        <br><br><br>
+
+        <label>Marks:</label>
+        <input type="number" [(ngModel)]="marks" name="marks" required>
+        <div *ngIf="form.submitted && form.controls['marks'].invalid" class="error-message">
+          Marks is required
+        </div>
+        <br><br>
+
+
+        <!----------------------------------->
+
+        <label>Job Title:</label>
+        <select [(ngModel)]="job_title" name="job_title2" required>
+          <option value="" disabled selected>Select a job title</option>
+
+          <option value="Technical Support Engineer">Technical Support Engineer</option>
+
+        </select>
+        <div *ngIf="form.submitted && form.controls['job_title'].invalid" class="error-message">
+          Job Title is required
+        </div>
+        <br><br><br>
+
+        <label>Marks:</label>
+        <input type="number" [(ngModel)]="marks" name="marks" required>
+        <div *ngIf="form.submitted && form.controls['marks'].invalid" class="error-message">
+          Marks is required
+        </div>
+        <br><br>
+
+
+
+        <!----------------------------------->
+
+        <label>Job Title:</label>
+        <select [(ngModel)]="job_title" name="job_title" required>
+          <option value="" disabled selected>Select a job title</option>
+
+          <option value="Quality Assurance Analyst">Quality Assurance Analyst</option>
+
+        </select>
+        <div *ngIf="form.submitted && form.controls['job_title'].invalid" class="error-message">
+          Job Title is required
+        </div>
+        <br><br><br>
+
+        <label>Marks:</label>
+        <input type="number" [(ngModel)]="marks" name="marks" required>
+        <div *ngIf="form.submitted && form.controls['marks'].invalid" class="error-message">
+          Marks is required
+        </div>
+        <br><br>
+
+
+
+
+
+
+
+
+
+        <!----------------------------------->
+
+        <label>Job Title:</label>
+        <select [(ngModel)]="job_title" name="job_title" required>
+          <option value="" disabled selected>Select a job title</option>
+
+          <option value="Network Administrator">Network Administrator</option>
+
+        </select>
+        <div *ngIf="form.submitted && form.controls['job_title'].invalid" class="error-message">
+          Job Title is required
+        </div>
+        <br><br><br>
+
+        <label>Marks:</label>
+        <input type="number" [(ngModel)]="marks" name="marks" required>
+        <div *ngIf="form.submitted && form.controls['marks'].invalid" class="error-message">
+          Marks is required
+        </div>
+        <br><br>
+
+
+
+        <!----------------------------------->
+
+        <label>Job Title:</label>
+        <select [(ngModel)]="job_title" name="job_title" required>
+          <option value="" disabled selected>Select a job title</option>
+
+          <option value="Front-End Web Developer">Front-End Web Developer</option>
+
+        </select>
+        <div *ngIf="form.submitted && form.controls['job_title'].invalid" class="error-message">
+          Job Title is required
+        </div>
+        <br><br><br>
+
+        <label>Marks:</label>
+        <input type="number" [(ngModel)]="marks" name="marks" required>
+        <div *ngIf="form.submitted && form.controls['marks'].invalid" class="error-message">
+          Marks is required
+        </div>
+        <br><br>
+
+
+
+        <!----------------------------------->
+
+        <label>Job Title:</label>
+        <select [(ngModel)]="job_title" name="job_title" required>
+          <option value="" disabled selected>Select a job title</option>
+
+          <option value="UX Designer">UX Designer</option>
+
+        </select>
+        <div *ngIf="form.submitted && form.controls['job_title'].invalid" class="error-message">
+          Job Title is required
+        </div>
+        <br><br><br>
+
+        <label>Marks:</label>
+        <input type="number" [(ngModel)]="marks" name="marks" required>
+        <div *ngIf="form.submitted && form.controls['marks'].invalid" class="error-message">
+          Marks is required
+        </div>
+        <br><br>
+
+
+
+        <!----------------------------------->
+
+        <label>Job Title:</label>
+        <select [(ngModel)]="job_title" name="job_title" required>
+
+          <option value="Mobile Application Developer">Mobile Application Developer</option>
+
+        </select>
+        <div *ngIf="form.submitted && form.controls['job_title'].invalid" class="error-message">
+          Job Title is required
+        </div>
+        <br><br><br>
+
+        <label>Marks:</label>
+        <input type="number" [(ngModel)]="marks" name="marks" required>
+        <div *ngIf="form.submitted && form.controls['marks'].invalid" class="error-message">
+          Marks is required
+        </div>
+        <br><br>
+
+
+
+        <!----------------------------------->
+
+        <label>Job Title:</label>
+        <select [(ngModel)]="job_title" name="job_title" required>
+          <option value="" disabled selected>Select a job title</option>
+
+          <option value="Game Developer">Game Developer</option>
+
+        </select>
+        <div *ngIf="form.submitted && form.controls['job_title'].invalid" class="error-message">
+          Job Title is required
+        </div>
+        <br><br><br>
+
+        <label>Marks:</label>
+        <input type="number" [(ngModel)]="marks" name="marks" required>
+        <div *ngIf="form.submitted && form.controls['marks'].invalid" class="error-message">
+          Marks is required
+        </div>
+        <br><br>
+
+
+
+        <!----------------------------------->
+
+        <label>Job Title:</label>
+        <select [(ngModel)]="job_title" name="job_title" required>
+          <option value="" disabled selected>Select a job title</option>
+
+          <option value="Game Designer">Game Designer</option>
+
+        </select>
+        <div *ngIf="form.submitted && form.controls['job_title'].invalid" class="error-message">
+          Job Title is required
+        </div>
+        <br><br><br>
+
+        <label>Marks:</label>
+        <input type="number" [(ngModel)]="marks" name="marks" required>
+        <div *ngIf="form.submitted && form.controls['marks'].invalid" class="error-message">
+          Marks is required
+        </div>
+        <br><br>
+
+
+        <!----------------------------------->
+
+        <label>Job Title:</label>
+        <select [(ngModel)]="job_title" name="job_title" required>
+          <option value="" disabled selected>Select a job title</option>
+
+          <option value="Graphic Designer">Graphic Designer</option>
+
+        </select>
+        <div *ngIf="form.submitted && form.controls['job_title'].invalid" class="error-message">
+          Job Title is required
+        </div>
+        <br><br><br>
+
+        <label>Marks:</label>
+        <input type="number" [(ngModel)]="marks" name="marks" required>
+        <div *ngIf="form.submitted && form.controls['marks'].invalid" class="error-message">
+          Marks is required
+        </div>
+        <br><br>
+
+
+        <!----------------------------------->
+
+        <label>Job Title:</label>
+        <select [(ngModel)]="job_title" name="job_title" required>
+          <option value="" disabled selected>Select a job title</option>
+
+          <option value="Web Designer">Web Designer</option>
+        </select>
+        <div *ngIf="form.submitted && form.controls['job_title'].invalid" class="error-message">
+          Job Title is required
+        </div>
+        <br><br><br>
+
+        <label>Marks:</label>
+        <input type="number" [(ngModel)]="marks" name="marks" required>
+        <div *ngIf="form.submitted && form.controls['marks'].invalid" class="error-message">
+          Marks is required
+        </div>
+        <br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <br><br>
+        <button type="submit" class="submitButton">Submit</button>
+
+        <button type="reset" class="clearbutton">Clear</button>
+      </div>
+    </form>
+  </div>
+</div>
+<br><br> <br>
+</body>

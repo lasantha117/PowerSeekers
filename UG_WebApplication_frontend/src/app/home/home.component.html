@@ -4,35 +4,38 @@
 </head>
 
 <body>
+<div *ngIf="isLoading">
+  <!-- Show loading symbol here -->
+  <div *ngIf="isLoading" class="loading-container">
+    <!-- Show loading symbol here -->
+    <img src="assets/gif/logo.gif" [style.width.px]="400" [style.height.px]="400" />
+  </div>
 
-
-<div class="fontCenter">
-  <h1>?</h1>
 </div>
 
-<!-- u&g side -->
-<div id="leftsidebar">
-  <div class="centered">
+<div *ngIf="!isLoading">
+  <div class="fontCenter">
+    <img src="assets/gif/qmark.gif" [style.width.px]="200" [style.height.px]="200" /><br><br>
+  </div>
 
-    <img src="/assets/img/u&g.png" alt="two students image">
-    <button (click)="GoStudentLogin()" class="button_1" style="vertical-align:middle" ><span>Graduate & Undergraduate </span></button>
+  <!-- u&g side -->
+  <div id="leftsidebar">
+    <div class="centered">
+      <img src="/assets/img/u&g.png" alt="two students image">
+      <button (click)="GoStudentLogin()" class="button_1" style="vertical-align:middle" ><span>Graduate or Undergraduate</span></button>
+    </div>
+  </div>
+
+  <!-- company side -->
+  <div id="rightsidebar">
+    <div class="centered">
+      <img src="/assets/img/Company.png" alt="a company image">
+      <button (click)="GoCompanyLogin()" class="button" style="vertical-align:middle" ><span>Company</span></button>
+    </div>
+  </div>
+
+  <div class="down">
+    <button (click)="GoIndex()" class="button_2" ><span>Back</span></button>
   </div>
 </div>
-
-<!-- company side -->
-
-<div id="rightsidebar">
-  <div class="centered">
-    <img src="/assets/img/Company.png" alt="a company image">
-    <button (click)="GoCompanyLogin()" class="button" style="vertical-align:middle" ><span>Company </span></button>
-  </div>
-</div>
-
-
-
-<div class="down">
-<button (click)="GoIndex()" class="button_2" style="vertical-align:middle" ><span>Back</span></button>
-</div>
-
-
 </body>

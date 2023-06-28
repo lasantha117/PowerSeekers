@@ -1,0 +1,122 @@
+<div class="formFont">
+  <br><br><br>
+
+
+
+
+      <form #form="ngForm" (ngSubmit)="onSubmit()" action="#">
+        <div class="fontcolor">
+          <br><br><br>
+          <br><br><br>  <br><br><br>  <br><br><br>  <br><br><br>
+          <label>Select the University:</label>
+          <select id="university" name="university" [(ngModel)]="selectedUniversity" required>
+            <option value="moratuwa">University of Moratuwa</option>
+            <option value="colombo">University of Colombo</option>
+          </select>
+          <div *ngIf="form.submitted && form.controls['university'].invalid" class="error-message">
+            University is required
+          </div>
+
+          <label>Select the Degree:</label>
+          <select [(ngModel)]="selectedDegree" id="degree" name="degree" required>
+            <option value="">Select a Degree</option>
+            <option *ngIf="selectedUniversity === 'moratuwa'" value="IT">IT</option>
+            <option *ngIf="selectedUniversity === 'moratuwa'" value="ITM">ITM</option>
+            <option *ngIf="selectedUniversity === 'colombo'" value="CS">CS</option>
+          </select>
+
+          <div *ngIf="form.submitted && form.controls['degree'].invalid" class="error-message">
+            Degree is required
+          </div>
+
+          <!-- get question -->
+          <br><br><br>
+
+          <label>The Question ID:</label>
+          <input type="text" size="50" [(ngModel)]="q_id" name="q_id" required><br>
+          <div *ngIf="form.submitted && form.controls['q_id'].invalid" class="error-message">
+            The Question ID is required
+          </div>
+          <br><br>
+          <label>Target Job Position:</label>
+          <select [(ngModel)]="target_jp" name="target_job_title" required>
+            <option value="" disabled selected>Select a job title</option>
+            <option *ngFor="let job of jobTitles" [value]="job">{{ job }}</option>
+          </select>
+          <div *ngIf="form.submitted && form.controls['target_jp'].invalid" class="error-message">
+            The Target Job Position is required
+          </div>
+          <br><br>
+
+          <label>The Question:</label>
+          <input type="text" size="50" [(ngModel)]="thequestion" name="thequestion" required><br>
+          <div *ngIf="form.submitted && form.controls['thequestion'].invalid" class="error-message">
+            The Question is required
+          </div>
+          <br><br>
+
+          <div class="formFont">
+            <div class="container" id="container">
+              <div class="form-container sign-in-container">
+                <div class="overlay-container">
+                  <br>      <br>      <br>
+                  <label>Answer:</label>
+                  <input type="text" [(ngModel)]="answer" name="answer" required>
+                  <br>      <br>      <br>
+                  <div class="form-container">
+                    <div *ngFor="let option of jobOptions" class="job-option">
+                      <div class="job-details">
+                        <label>Job Title:</label>
+                        <select [(ngModel)]="option.job_title" name="job_title" required>
+                          <option value="" disabled selected>Select a job title</option>
+                          <option *ngFor="let job of jobTitles" [value]="job">{{ job }}</option>
+                        </select>
+                        <div *ngIf="form.submitted && form.controls[option.job_title].invalid" class="error-message">
+                          Job Title is required
+                        </div>
+                      </div>
+                      <div class="job-details">
+                        <label>Marks:</label>
+                        <input type="number" [(ngModel)]="option.marks" name="marks" required>
+                      </div>
+                      <br><br>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+
+          <!-- 2 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  <br>      <br>      <br>
+          <button type="submit" class="submitButton">Submit</button>
+
+          <button type="reset" class="clearbutton">Clear</button>
+          <br><br> <br><br>
+        </div>
+
+        </div>
+      </form>
+
+    </div>

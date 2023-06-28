@@ -1,6 +1,7 @@
 package UG_WebApplication.services;
 import UG_WebApplication.entity.answers;
 
+import UG_WebApplication.entity.question;
 import UG_WebApplication.repositories.answersRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,11 +29,14 @@ public class answersService {
     }
 
 
-    public void deleteAnswers(String a_id) {
-        answersRepository.deleteById(a_id);
+    public void deleteAnswers(Long a_id) {
+        answersRepository.deleteById(String.valueOf(a_id));
 
     }
 
+    public void updateAnswer( answers answers) {
+        answersRepository.save(answers);
+    }
 
 
 

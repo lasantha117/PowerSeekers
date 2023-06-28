@@ -1,15 +1,13 @@
 body {
-  background: url('/assets/img/question_bg.png') no-repeat  center fixed;
+  background: url('/assets/img/qe.jpg') no-repeat  center fixed;
 
-
-  display: flex;
-
-
-  margin: -20px 0 50px;
   background-size: cover;
+  display: flex;
+  height: 100vh;
+  margin: -20px 0 50px;
+  font-family: 'Montserrat', sans-serif;
   flex-direction: column;
   align-items: center;
-
 
 }
 

@@ -1,17 +1,20 @@
 body {
-  background: url('/assets/img/test_start_bg.png') no-repeat  center fixed;
-
+  background: url('/assets/img/test_bg.jpg') no-repeat center center fixed;
+  background-size: cover;
   display: flex;
   height: 100vh;
   margin: -20px 0 50px;
   font-family: 'Montserrat', sans-serif;
-  background-size: cover;
   flex-direction: column;
   align-items: center;
-
-
 }
 
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Set the height of the container to the full viewport height */
+}
 
 
 /*-------------------- Menu----------------*/
@@ -47,7 +50,7 @@ li a:hover:not(.active) {
 
 
 /*---------------------- button -----------------------*/
-button {
+button{
   border-radius: 20px;
   border: 1px solid black;
   background-color: midnightblue;

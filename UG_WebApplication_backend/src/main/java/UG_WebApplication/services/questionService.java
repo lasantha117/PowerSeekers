@@ -9,14 +9,16 @@ import java.util.*;
 @Service
 public class questionService {
     @Autowired
-    UG_WebApplication.repositories.questionRepository questionRepository;
-
-    @Autowired
-    private UG_WebApplication.repositories.answersRepository answersRepository;
+    static
+    questionRepository questionRepository;
 
 
+    questionService(questionRepository questionRepository) {
+        this.questionRepository = questionRepository;
+    }
 
-   public List<question> getQuestionAdmin()
+
+   public static List<question> getQuestionAdmin()
     {
        return questionRepository.findAll();
   }
@@ -43,18 +45,11 @@ public class questionService {
 
     //update question
 
-    public question updateQuestion(String q_id, question question) {
-        Optional<question> existingQuestion = questionRepository.findById(q_id);
-        if (existingQuestion.isEmpty()) {
-            throw new RuntimeException("Question not found for this id: " + q_id);
-        }
-    question updatedQuestion = existingQuestion.get();
+    public void updateQuestion(question question) {
+        questionRepository.save(question);
+    }
 
-    updatedQuestion.setUniversity(question.getUniversity());
-    updatedQuestion.setDegree(question.getDegree());
-    updatedQuestion.setThequestion(question.getThequestion());
-    return questionRepository.save(updatedQuestion);
-}
+
 
 
 
@@ -65,8 +60,8 @@ public class questionService {
 
     //get  question
 
-    private List<question> questionList = new ArrayList<>();
-    private String lastQid = null;
+    private static List<question> questionList = new ArrayList<>();
+    private static String lastQid = null;
 
     public question getQuestion() {
         if (questionList.isEmpty()) {

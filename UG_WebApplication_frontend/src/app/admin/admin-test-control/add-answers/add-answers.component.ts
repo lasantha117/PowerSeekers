@@ -1,13 +1,8 @@
 import { Component } from '@angular/core';
-import {Router} from "@angular/router";
-import {HttpClient} from "@angular/common/http";
+import { Router } from '@angular/router';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
-
-
-
-function upload(params: { ContentType: any; Bucket: string; ACL: string; Body: any; Key: string }, param2: (err: any, data: any) => void) {
-
-}
 @Component({
   selector: 'app-add-answers',
   templateUrl: './add-answers.component.html',
@@ -15,54 +10,58 @@ function upload(params: { ContentType: any; Bucket: string; ACL: string; Body: a
 })
 export class AddAnswersComponent {
 
-  a_id  : any;
   q_id: any;
-  answer : any;
+  answer: any;
+  formSubmitted: boolean = false;
 
-
+  constructor(
+    private router: Router,
+    private http: HttpClient,
+    private snackBar: MatSnackBar
+  ) {}
 
   AnswerSubmit() {
-    const url = 'http://localhost:8080/addAnswers';
+    this.formSubmitted = true;
+
+    if (!this.q_id || !this.answer) {
+      return; // Exit if any field is empty
+    }
+
+    const url = 'http://localhost:8080/api/v1/auth/addAnswers';
     const data = {
-      a_id: this.a_id,
       q_id: this.q_id,
-      answer:this.answer,
-
+      answer: this.answer,
     };
-
-
-
 
     this.http.post(url, data).subscribe(
       res => {
         console.log(res);
-        alert('Answer saved successfully!');
+        this.snackBar.open('Answer Added Successfully','Close', { duration: 7000 });
       },
       err => {
         console.log(err);
-        alert('Error saving Answers');
-      });
+        this.snackBar.open('Something went wrong', 'Close', { duration: 7000 });
+      }
+    );
   }
-
 
 
   getQid() {
-    this.http.get('http://localhost:8080/getAnswers').subscribe(
-      (resp) => {
+    const url = 'http://localhost:8080/getAnswers';
+    const token = localStorage.getItem('token');
+    const headers = new HttpHeaders().set('Authorization', 'Bearer ' + token);
+    this.http.get(url, { headers }).subscribe(
+      resp => {
         console.log(resp);
         this.answer = resp;
       },
-
-      (err) => {
+      err => {
         console.log(err);
       }
-    )
+    );
   }
-
-
-
-
-
-  constructor(private router: Router, private http: HttpClient) {}
+  openSnackBar(message: string) {
+    this.snackBar.open(message, 'Close', { duration: 7000 });
+  }
 
 }

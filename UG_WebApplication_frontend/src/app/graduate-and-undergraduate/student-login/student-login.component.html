@@ -1,45 +1,63 @@
+<!DOCTYPE html>
+<html>
 <head>
-  <title>U&G Login</title>
+  <title>U&amp;G Login</title>
 </head>
 <body>
 
-  <h1>U&G Login</h1>
-<br>
+<div *ngIf="isLoading">
+  <!-- Show loading symbol here -->
+  <div *ngIf="isLoading" class="loading-container">
+    <!-- Show loading symbol here -->
+    <img src="assets/gif/logo.gif" [style.width.px]="400" [style.height.px]="400" />
+  </div>
 
+</div>
+
+
+
+<br>
+<div *ngIf="!isLoading">
 <div class="container" id="container">
   <div class="form-container sign-in-container">
-    <form action="#">
-      <h1>Sign in</h1>
+    <form (ngSubmit)="login()" action="#" #form="ngForm">
+      <h1>Login</h1>
+      <br><br>
+      <input type="email" placeholder="Email" [(ngModel)]="email" name="email" required />
+      <div *ngIf="form.submitted && form.controls['email'].invalid" class="error-message">
+        Email is required
+      </div>
 
-
-      <input type="email" placeholder="Email"  />
-      <input type="password" placeholder="Password" />
+      <input type="password" placeholder="Password" [(ngModel)]="password" name="password" required />
+      <div *ngIf="form.submitted && form.controls['password'].invalid" class="error-message">
+        Password is required
+      </div>
 
       <a href="#">Forgot your password?</a>
 
-      <button>Sign In</button>
+      <button type="submit">Login</button>
+      <p class="error-message" *ngIf="message">{{ message }}</p> <!-- Display error message -->
     </form>
   </div>
   <div class="overlay-container">
     <div class="overlay">
       <div class="overlay-panel overlay-left">
-
-        <button class="ghost" id="signIn">Sign In</button>
+        <button class="ghost" id="signIn">Login</button>
       </div>
       <div class="overlay-panel overlay-right">
-        <h1>Welcome!</h1>
+        <img src="assets/gif/mlogo.gif" [style.width.px]="200" [style.height.px]="200" /><br><br>
 
-        <br>
-        <p>New to U&G?</p>
-        <br>
-        <button class="ghost" id="signUp">Sign Up</button>
+        <p>New to U&amp;G?</p>
+        <button (click)="signup()" class="ghost button" id="signup">Create an Account</button>
+
       </div>
     </div>
   </div>
 </div>
-
+</div>
 <br>
-<button (click)="GoHome()" class="button" style="vertical-align:middle" ><span>Back</span></button>
-
+<button (click)="GoHome()" class="button" style="vertical-align:middle"><span>Back</span></button>
 
 </body>
+
+</html>

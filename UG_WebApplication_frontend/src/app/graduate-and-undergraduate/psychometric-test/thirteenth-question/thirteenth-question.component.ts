@@ -12,25 +12,29 @@ export class ThirteenthQuestionComponent implements OnInit {
   answers: any;
   selectedAnswer:any;
   answerSelected:any = false;
+  isLoading: boolean = true;
+
 
   ngOnInit() {
-    this.http.get('http://localhost:8080/getQuestionForUser').subscribe((questionData: any) => {
+    this.isLoading = true; // Set isLoading to true before making API requests
+
+    this.http.get('http://localhost:8080/api/v1/auth/getQuestionForUser').subscribe((questionData: any) => {
       this.question = questionData;
 
-      this.http.get('http://localhost:8080/getAnswers').subscribe((answersData: any) => {
+      this.http.get('http://localhost:8080/api/v1/auth/getAnswers').subscribe((answersData: any) => {
         this.answers = answersData.filter((answer: any) => answer.q_id === this.question.q_id);
+
+        this.isLoading = false; // Set isLoading to false when responses are received
       });
     });
   }
 
-
   onSubmit() {
     const data = {
-
-      a_id: this.selectedAnswer
+      a_id: this.selectedAnswer,
+      email: localStorage.getItem('email') // Get the stored email from local storage
     };
-
-    this.http.post('http://localhost:8080/saveAnswer', data).subscribe(() => {
+    this.http.post('http://localhost:8080/api/v1/auth/saveAnswer', data).subscribe(() => {
       // alert('Answer saved successfully!');
     });
 

@@ -1,25 +1,27 @@
-
-<html lang="en" >
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Login Page in HTML with CSS Code Example</title>
-
 </head>
-<body >
-
+<body>
 <div class="UGimg">
-<img src="/assets/img/UG.png" >
+  <div class="live-text">
+    <span class="live-text">{{ typedText }}</span>
 
+
+  </div>
+
+<!--  <img src="/assets/svg/intro.svg" alt="Low Code Development" [style.width.px]="svgWidth" [style.height.px]="svgHeight">-->
 </div>
+
+
 <div class="bottom">
 
-  <button class="button_1" style="vertical-align:middle" ><span>Join Now</span></button>
-  <button (click)="GoHome()"  class="button_1" style="vertical-align:middle" ><span>Login</span></button>
+  <img src="assets/gif/logo.gif" [style.width.px]="300" [style.height.px]="300" /><br><br>
+  <button (click)="GoHome()" class="button_1" style="vertical-align: middle"><span>Let's Go</span></button>
+
+
 </div>
-
-
 </body>
-
-
-
 </html>

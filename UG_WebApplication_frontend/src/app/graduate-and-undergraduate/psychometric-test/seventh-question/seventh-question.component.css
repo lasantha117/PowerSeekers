@@ -1,5 +1,5 @@
 body {
-  background: url('/assets/img/question_bg.png') no-repeat  center fixed;
+  background: url('/assets/img/qe.jpg') no-repeat  center fixed;
 
 
   display: flex;
@@ -90,7 +90,7 @@ li a:hover:not(.active) {
 
 }
 .disabled {
-  background-color: #1c1f23; /* gray background */
+  background-color: #1c1f23;
   box-shadow: none; /* remove box shadow */
   cursor: not-allowed; /* change cursor to not-allowed */
 }

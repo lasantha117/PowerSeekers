@@ -1,23 +1,81 @@
-<form (ngSubmit)="onSubmit()">
-  <label>
-    Admin Name:
-    <input type="text" name="adminName" [(ngModel)]="adminName" required>
-  </label>
+<head>
+  <title>U&G Login</title>
+</head>
+<body>
+<div class="formFont">
   <br>
-  <label>
-    Email Address:
-    <input type="email" name="emailAddress" [(ngModel)]="emailAddress" required>
-  </label>
-  <br>
-  <label>
-    Password:
-    <input type="password" name="password" [(ngModel)]="password" required>
-  </label>
-  <br>
-  <label>
-    Confirm Password:
-    <input type="password" name="confirmpassword" [(ngModel)]=" confirmPassword" required>
-  </label>
-  <br>
-  <button type="submit">Register</button>
-</form>
+
+</div>
+<br>
+<div class="container" id="container">
+  <div class="form-container sign-in-container">
+
+    <form  #form="ngForm"  (ngSubmit)="onSubmit()"  action="#">
+      <label>
+        Admin Name:
+        <input type="text" name="adminName" [(ngModel)]="name" required class="required-field">
+        <div *ngIf="form.submitted && form.controls['adminName'].invalid" class="error-message">
+          Name is required
+        </div>
+      </label>
+      <br>
+      <label>
+        Email Address:
+        <input type="email" name="emailAddress" [(ngModel)]="email" required class="required-field">
+        <div *ngIf="form.submitted && form.controls['emailAddress'].invalid" class="error-message">
+          Email is required
+        </div>
+      </label>
+      <br>
+      <label>
+        Password:
+        <input type="password" name="password" [(ngModel)]="password" required class="required-field">
+        <div *ngIf="form.submitted && form.controls['password'].invalid" class="error-message">
+          Password is required
+        </div>
+      </label>
+      <br>
+      <label>
+        Confirm Password:
+        <input type="password" name="confirmPassword" [(ngModel)]="confirmPassword" required class="required-field">
+        <div *ngIf="form.submitted && form.controls['confirmPassword'].invalid" class="error-message">
+          Confirm Password is required
+        </div>
+      </label>
+      <br>
+
+      <div class="button-container">
+        <button type="submit">Done</button>
+        <button type="reset">Clear</button>
+      </div>
+
+    </form>
+  </div>
+  <div class="overlay-container">
+    <div class="overlay">
+
+      <div class="overlay-panel overlay-right">
+        <img src="assets/gif/logo.gif" [style.width.px]="150" [style.height.px]="150" /><br><br>
+
+        <h1>Welcome!</h1><br><br>
+        <span class="live-text">{{ typedText }}</span>
+        <br><br><br>
+
+
+
+        <hr style="width:50%;text-align:left">
+
+        <br><br><br>
+
+        <button (click)="Login()" class="ghost" id="Login">Login</button>
+
+
+        <p><i>if you alrday have an account</i></p>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+</body>

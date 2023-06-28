@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<br><br><br><br><br><br>
+
+<br>
+<div *ngIf="isLoading">
+  <!-- Show loading symbol here -->
+  <div *ngIf="isLoading" class="loading-container">
+    <!-- Show loading symbol here -->
+    <img src="assets/gif/logo.gif" [style.width.px]="400" [style.height.px]="400" />
+  </div>
+
+</div>
+
+
+
+<div *ngIf="!isLoading">
+
+<div class="container" id="container">
+  <div class="form-container sign-in-container">
+    <form (ngSubmit)="register()" action="#" #form="ngForm">
+
+      <label>Name:</label>
+      <input type="email" placeholder="name" [(ngModel)]="name" name="name" required />
+      <div *ngIf="form.submitted && form.controls['email'].invalid" class="error-message">
+        Your Name is required
+      </div>
+
+
+
+      <label>Email:</label>
+      <input type="email" placeholder="Email" [(ngModel)]="email" name="email" required />
+      <div *ngIf="form.submitted && form.controls['email'].invalid" class="error-message">
+        Email is required
+      </div>
+
+
+
+      <label>Select the University:</label>
+      <select id="university" name="university" [(ngModel)]="university" required>
+        <option value="" disabled selected>Select Yours University</option>
+        <option value="moratuwa">University of Moratuwa</option>
+        <option value="colombo">University of Colombo</option>
+      </select>
+      <div *ngIf="form.submitted && form.controls['university'].invalid" class="error-message">
+        University is required
+      </div>
+
+      <label>Select the Degree:</label>
+      <select [(ngModel)]="degree" id="degree" name="degree" required>
+        <option value="" disabled selected>Select a Degree</option>
+        <option *ngIf="university === 'moratuwa'" value="IT">IT</option>
+        <option *ngIf="university === 'moratuwa'" value="ITM">ITM</option>
+        <option *ngIf="university === 'colombo'" value="CS">CS</option>
+      </select>
+      <div *ngIf="form.submitted && form.controls['degree'].invalid" class="error-message">
+        Degree is required
+      </div>
+
+
+
+      <label>Date of Birth:</label>
+      <input type="date" placeholder="Date of Birth" [(ngModel)]="dob" name="dateOfBirth" required />
+
+      <div *ngIf="form.submitted && form.controls['dateOfBirth'].invalid" class="error-message">
+        Date of Birth is required
+      </div>
+
+      <label>Password:</label>
+      <input type="password" placeholder="Password" [(ngModel)]="password" name="password" required />
+      <div *ngIf="form.submitted && form.controls['password'].invalid" class="error-message">
+        Password is required
+      </div>
+
+
+
+
+      <label>Confirm Password:</label>
+      <input type="password" placeholder="Confirm Password" [(ngModel)]="confirmPassword" name="confirmPassword" required />
+
+      <div *ngIf="form.submitted && form.controls['confirmPassword'].invalid" class="error-message">
+        Confirm Password is required
+      </div>
+
+
+
+      <div class="button-container">
+        <button type="submit">Done</button>
+        <button type="reset">Clear</button>
+      </div>
+
+
+    </form>
+    <p class="error-message" *ngIf="message">{{ message }}</p> <!-- Display error message -->
+  </div>
+  <div class="overlay-container">
+    <div class="overlay">
+      <div class="overlay-panel overlay-left">
+        <button class="ghost" id="signIn">Sign In</button>
+      </div>
+      <div class="overlay-panel overlay-right">
+        <h1>Welcome </h1><br>   <br>
+        <br>  <br>
+        <span class="live-text">{{ typedText }}</span>
+        <br>  <br>   <br>
+
+
+
+        <img src="assets/gif/logo.gif" [style.width.px]="200" [style.height.px]="200" /><br><br>
+        <br>
+
+        <br>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<br>
+<button (click)="GoHome()" class="button" style="vertical-align:middle"><span>Back</span></button>
+</body>
+</html>

@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+* {
+  margin:10px;
+  padding: 10px;
+  box-sizing: border-box;
+  position: center;
+  font-family: 'Audiowide', cursive;
+}
+
+body {
+  background: url('/assets/img/rules.jpg') no-repeat center center fixed;
+
+  display: flex;
+
+  height: 100vh;
+  margin: -20px 0 50px;
+  font-family: 'Audiowide', cursive;
+  background-size: cover;
+  flex-direction: column;
+
+
+
+}
+
+#calculateButton.hidden {
+  display: none;
+}
+
+
+.live-text {
+  animation: fade 1s infinite;
+  font-size: 80px;
+  color: #efeaea;
+  white-space: nowrap;
+  font-family: 'Audiowide', cursive;
+}
+
+
+
+.fontcolor
+{
+  color: #FFFFFF;
+  justify-content: center;
+  text-align: center;
+  font-size: 35px; /* Adjust the value as needed */
+}
+
+.Recommandation{
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content:center;
+  width: 10%;
+  height:10%;
+
+}
+ul {
+  list-style-type: none;
+}
+.button{
+
+  margin: 0px auto;
+  padding: 0px 0px;
+  font-family: 'Audiowide', cursive;
+
+}

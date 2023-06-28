@@ -30,6 +30,9 @@ public class question {
     private String degree;
 
 
+    @Column(name = "target_jp")
+    private String target_jp;
+
     @JsonIgnore
     @OneToMany
     @JoinColumn(name = "q_id")
@@ -86,4 +89,11 @@ public class question {
     }
 
 
+    public String getTarget_jp() {
+        return target_jp;
+    }
+
+    public void setTarget_jp(String target_jp) {
+        this.target_jp = target_jp;
+    }
 }

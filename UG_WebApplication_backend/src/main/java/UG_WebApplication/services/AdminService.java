@@ -1,35 +1,23 @@
 package UG_WebApplication.services;
 
 import UG_WebApplication.entity.admin;
-import UG_WebApplication.entity.question;
 import UG_WebApplication.repositories.AdminRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service
-public class AdminService {
-    @Autowired
-    private AdminRepository adminRepository;
+@AllArgsConstructor
+public class AdminService  {
 
-    public admin registerAdmin(String adminName, String emailAddress , String password,String confirmpassword) {
-        if (adminRepository.findByEmailAddress(emailAddress) != null) {
-            throw new RuntimeException("Admin with email address " + emailAddress + " already exists");
-        }
-        admin admin = new admin();
-        admin.setAdminName(adminName);
-        admin.setEmailAddress(emailAddress);
-        admin.setPassword(password);
-        admin.setConfirmPassword(confirmpassword);
-        return adminRepository.save(admin);
-    }
+    private final static String USER_NOT_FOUND_MSG = "user with email %s not found";
+    private final AdminRepository adminRepository;
 
 
-
-
-
-    public admin registerAdmin(admin admin){
-
-        return adminRepository.save(admin);
-    }
 
 }
+
+
+

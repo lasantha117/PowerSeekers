@@ -1,4 +1,3 @@
-
 <body>
 
 
@@ -10,36 +9,54 @@
 
   <div class="mt-5">
     <div class="scroll">
-    <table class="table table-bordered">
-      <thead class="thead">
-      <tr>
-        <th>Answer ID</th>
-        <th>Question ID</th>
-        <th>Answer</th>
-        <th>Delete</th>
-      </tr>
-      </thead>
+      <table class="table table-bordered">
+        <thead class="thead">
+        <tr>
+          <th>Answer ID</th>
+          <th>Question ID</th>
+          <th>Answer</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </tr>
+        </thead>
 
-      <tbody class="tbody">
-      <tr *ngFor="let answer of  answer">
-        <td> {{answer.a_id }}</td>
-        <td>{{ answer.q_id }}</td>
-        <td>{{ answer.answer }}</td>
-        <td><button type="button" (click)="deleteAnswers(answer.a_id)">Delete</button></td>
-      </tr>
+        <tbody class="tbody">
+        <tr *ngFor="let answer of  answer">
+          <td> {{answer.a_id }}</td>
+          <td>{{ answer.q_id }}</td>
+          <td>{{ answer.answer }}</td>
+          <td>
+            <button type="button" class="UpdateButton" (click)="editAnswer(answer)">Edit</button>
+          </td>
+          <td>
+            <button type="button" class="DeleteButton" (click)="deleteAnswer(answer.a_id)">Delete</button>
 
-      </tbody>
 
-    </table>
+          </td>
+        </tr>
+
+        </tbody>
+
+      </table>
+
+    <div *ngIf="editingAnswer">
+      <input type="text" [(ngModel)]="editingAnswer.answer" />
+      <button type="button" class="SaveButton" (click)="updateAnswer()">Save</button>
+      <button type="button" class="DeleteButton" (click)="cancelEdit()">Cancel</button>
     </div>
 
-  </div>
+
 </div><br><br><br><br><br><br><br>
 
 
+  <span *ngIf="deleteConfirmation">
+            <b>Are you sure you want to delete this answer?</b>
+            <button type="button"class="DeleteButton" (click)="deleteAnswers()">Delete</button>
+            <button type="button"class="SaveButton" (click)="deleteConfirmation = false">Cancel</button>
+          </span>
+</div>
 
 
-
-
+</div>
 
 </body>

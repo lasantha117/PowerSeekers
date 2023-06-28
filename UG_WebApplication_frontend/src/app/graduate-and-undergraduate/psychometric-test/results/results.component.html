@@ -1,1 +1,31 @@
-<p>results works!</p>
+<body>
+<div class="fontcolor">
+  <br><br><br><br><br><br>
+
+
+
+
+  <div class="Recommandation">
+
+  </div>
+
+  <div *ngIf="jobTitles.length > 0">
+    <ul>
+      <li *ngFor="let jobTitle of jobTitles">{{ jobTitle }}</li>
+    </ul>
+  </div>
+
+  <div *ngIf="jobTitles.length === 0">
+
+    <span class="live-text">{{ typedText }}</span>
+
+  </div>
+  <br><br><br><br><br><br>
+</div>
+<div class="button">
+
+  <button (click)="getTopThreeJobTitles()"[disabled]="isButtonDisabled2">View The Results</button>
+
+</div>
+
+</body>

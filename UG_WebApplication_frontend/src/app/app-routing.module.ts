@@ -79,6 +79,15 @@ import {
 import {
   TwentiethQuestionComponent
 } from "./graduate-and-undergraduate/psychometric-test/twentieth-question/twentieth-question.component";
+import {AuthGuard} from "./auth-guard.service";
+import {AddQuestionsComponent} from "./admin/add-questions/add-questions.component";
+
+import {NewMarksComponent} from "./admin/new-marks/new-marks.component";
+import {StudentSignupComponent} from "./graduate-and-undergraduate/student-signup/student-signup.component";
+import {RulesComponent} from "./graduate-and-undergraduate/psychometric-test/rules/rules.component";
+import {ForgotPasswordComponent} from "./admin/admin-login/forgot-password/forgot-password.component";
+import {SettingsComponent} from "./admin/settings/settings.component";
+
 
 
 const routes: Routes = [
@@ -105,12 +114,15 @@ const routes: Routes = [
 
   {
     path:'admin-dashboard',
-    component:AdminDashboardComponent
+    component:AdminDashboardComponent,
+    canActivate: [AuthGuard]
   },
 
   {
     path:'admin-test-control',
-    component:AdminTestControlComponent
+    component:AdminTestControlComponent,
+    canActivate: [AuthGuard]
+
   },
   {
     path:'add-answers',
@@ -129,12 +141,16 @@ const routes: Routes = [
 
   {
     path:'preview-question',
-   component:PreviewQuestionComponent
+   component:PreviewQuestionComponent,
+    canActivate: [AuthGuard]
+
   },
 
   {
     path:'preview-answers',
-    component:PreviewAnswersComponent
+    component:PreviewAnswersComponent,
+    canActivate: [AuthGuard]
+
   },
 
   {
@@ -260,10 +276,41 @@ const routes: Routes = [
     path:"admin-sign-up",
     component:AdminSignUpComponent
 
-  }
+  },
+
+  {
+    path:"add-questions",
+    component:AddQuestionsComponent
+
+  },
+
+  {
+    path:"new-marks",
+    component:NewMarksComponent
+
+  },
+  {
+    path:"student-signup",
+    component:StudentSignupComponent
+
+  },
+  {
+    path:"rules",
+    component:RulesComponent
+
+  },
 
 
+  {
+    path:"forgot-password",
+    component:ForgotPasswordComponent
 
+  },
+  {
+    path:"settings",
+    component:SettingsComponent
+
+  },
 
 ];
 

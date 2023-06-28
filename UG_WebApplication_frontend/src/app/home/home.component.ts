@@ -7,11 +7,26 @@ import {Router} from "@angular/router";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-
+  isSymbolRotated = false;
+  isLoading: boolean = true;
 
   constructor(private router:Router) {
   }
 
+  ngOnInit() {
+    this.isLoading = true;
+
+    // Simulate loading delay of 2 seconds
+    setTimeout(() => {
+      this.isLoading = false; // Set isLoading to false when responses are received
+    }, 2000);
+  }
+
+
+
+  rotateSymbol() {
+    this.isSymbolRotated = !this.isSymbolRotated;
+  }
 
   GoStudentLogin(){
     this.router.navigate(['/student-login']);

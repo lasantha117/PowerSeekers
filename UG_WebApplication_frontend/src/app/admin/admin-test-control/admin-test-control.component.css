@@ -12,7 +12,8 @@ body{
 
   display: flex;
 
-
+  height: 400vh;
+  margin: -20px 0 50px;
 
   font-family: 'Montserrat', sans-serif;
   background-size: cover;
@@ -24,7 +25,8 @@ body{
 
 
 .wrapper .sidebar{
-  background: black;
+  background: transparent;
+  box-shadow: 0 14px 28px rgb(255, 255, 255);
   position: fixed;
   top: 0;
   left: 0;
@@ -57,7 +59,6 @@ body{
 .wrapper .sidebar ul li a{
   display: block;
   padding: 13px 30px;
-  border-bottom: 3px solid deepskyblue;
   color: rgb(241, 237, 237);
   font-size: 16px;
   position: relative;
@@ -101,7 +102,7 @@ body{
     /*------ error msg---------------------------- */
 
 .error-message {
-  color: red;
+  color: #ff1313;
   font-size: 0.8em;
   margin-top: 0.5em;
 }
@@ -116,5 +117,196 @@ h1{
 {
   color: #FFFFFF;
 }
+/*submit button css*/
+.submitButton,.clearbutton{
+  padding: 15px 20px;
+  background-color: #76ff81;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 4px;
+  overflow: hidden;
+  transition: 0.5s;
+  cursor: pointer;
+  margin-right: 10px;
+
+}
+
+.submitButton:hover{
+  background: #76ff81;
+  color: #efeaea;
+  box-shadow: 0 0 5px #10a116,
+  0 0 25px #10a116,
+  0 0 50px #76ff81,
+  0 0 200px #ffffff;
+  -webkit-box-reflect:below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.33));
+}
 
 
+
+
+/*clear button css*/
+.clearbutton{
+  position:center;
+  background-color: #b02a2a;
+  color: #ffffff;
+
+}
+
+.clearbutton:hover{
+  background: #ff3333;
+  color: #efeaea;
+  box-shadow: 0 0 5px #ff3333,
+  0 0 25px #ff3333,
+  0 0 50px #ff3333,
+  0 0 200px #ffffff;
+  -webkit-box-reflect:below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.33));
+}
+
+
+
+.clearbutton:active,.submitButton:active {
+  box-shadow: 0px 3px 0px #888;
+  transform: translateY(8px);
+  transition: all 0.5s;
+}
+
+
+
+/*delete button css*/
+
+.DeleteButton{
+
+  background-color: #b02a2a;
+  color: #ffffff;
+
+}
+
+.DeleteButton:hover{
+  background: #ff3333;
+  color: #efeaea;
+  box-shadow: 0 0 5px #ff3333,
+  0 0 25px #ff3333,
+  0 0 50px #ff3333,
+  0 0 200px #ffffff;
+  -webkit-box-reflect:below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.33));
+}
+
+
+
+.DeleteButton:active,.submitButton:active {
+  box-shadow: 0px 3px 0px #888;
+  transform: translateY(8px);
+  transition: all 0.5s;
+}
+
+
+
+
+/* Preview Button*/
+
+.PreviewButton {
+  border-radius: 25px;
+  background-color: #1c1f23;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 11px;
+  padding: 13px;
+  width: 175px;
+  transition: all 1s;
+  cursor:pointer;
+  margin: 1px;
+}
+
+.PreviewButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.PreviewButton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -80px;
+  transition: 1s;
+}
+
+.PreviewButton:hover span {
+  padding-right: 25px;
+}
+
+.PreviewButton:hover span:after {
+  opacity: 6;
+  right: 0;
+}
+
+.PreviewButton:hover {
+  background-color: #cc57ee
+}
+
+.PreviewButton:active {
+  background-color: #e8e8e8;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+
+/*form styles*/
+
+
+form {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  text-align: center;
+  background: transparent;
+
+}
+
+input {
+  background-color: #e8e8e8;
+  border: none;
+  padding: 3px 7px;
+  margin: 5px 30px;
+  width: 50%;
+
+}
+
+.container {
+  background: transparent;
+  border-radius: 100px;
+  box-shadow: 0 14px 28px rgb(255, 255, 255),
+  0 10px 10px rgba(255, 255, 255, 0.22);
+  position: relative;
+  overflow: hidden;
+  width: 768px;
+  max-width: 100%;
+  min-height: 400px;
+}
+
+.fontcolor
+{
+  color: white;
+}
+.popup-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  max-width: 80%; /* Add this line */
+}
